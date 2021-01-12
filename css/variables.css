@@ -1,0 +1,19 @@
+:root {
+  --white              : #FFFFFF;
+  --white--rgb         : 255, 255, 255;
+  --black              : #000000;
+  --black--rgb         : 0, 0, 0;
+  --verydarkgray       : #666666;
+  --gray90             : #e5e5e5;
+  --gray60             : #999999;
+  --gray20             : #333333;
+  --lightgray          : #CACACA;
+  --lightlightgray     : #C4C4C4;
+  --verylightgray      : #ECECEC;
+  --moderateviolet     : #9D5CD0;
+  --moderateviolet--rgb: 157, 92, 208;
+  --darkmoderateviolet : #7943a4;
+  --verysoftviolet     : #D1A9F0;
+  --softviolet         : #C283F3;
+  --softviolet--rgb    : 194, 131, 243;
+}
