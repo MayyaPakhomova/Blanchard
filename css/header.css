@@ -11,16 +11,13 @@
 }
 
 .header-menu-top-logo {
-  margin-top       : 31px;
-  margin-left      : 5px;
-  background-image : url(../img/header/header.png);
-  background-repeat: no-repeat;
-  width            : 173px;
-  height           : 40px
+  margin-top : 31px;
+  margin-left: 5px;
 }
 
+
 .header-menu-top-logo:focus {
-  outline: 1px solid var(--white);
+  outline: 1px solid var(--white)
 }
 
 .header-menu-top {
@@ -46,6 +43,7 @@
 }
 
 .header-menu-top-total-left__link {
+  padding    : 1px;
   font-weight: 700;
   font-size  : 18px;
   line-height: 25px;
@@ -100,7 +98,7 @@
   position       : relative;
   display        : flex;
   justify-content: space-between;
-  padding        : 18px 100px 0 100px;
+  padding        : 7px 100px 0px;
   align-items    : center;
   cursor         : pointer;
   z-index        : 5
@@ -126,6 +124,7 @@
 }
 
 .header-menu-bottom__item {
+  padding            : 1px;
   margin-top         : 26px;
   margin-right       : 92px;
   font-weight        : normal;
@@ -169,14 +168,12 @@
 }
 
 .header-menu-bottom-inner__link {
-  padding-top   : 9px;
-  padding-bottom: 12px;
-  padding-left  : 14px;
-  width         : 220px;
-  height        : 40px;
-  display       : inline-block;
-  padding       : 5px 10px;
-  color         : var(--white)
+  padding   : 9px 1px 12px 14px;
+  width     : 220px;
+  min-height: 40px;
+  display   : inline-block;
+  padding   : 5px 10px;
+  color     : var(--white)
 }
 
 .header-menu-bottom-inner__link:hover {
@@ -447,7 +444,7 @@ body.touch .header-menu-bottom-inner.open {
 
   .header-menu-top {
     padding-left : 20px;
-    padding-right: 20px;
+    padding-right: 20px
   }
 
   .header-menu-bottom {
@@ -485,11 +482,15 @@ body.touch .header-menu-bottom-inner.open {
     background-color: var(--black)
   }
 
+  .header-menu-top-logo__img {
+    width : 188px;
+    height: 42px;
+  }
+
   .header-menu-burger {
     position        : relative;
     background-color: transparent;
     margin-left     : 20px;
-    right           : 2px;
     bottom          : 3px;
     width           : 40px;
     height          : 35px;
@@ -586,7 +587,7 @@ body.touch .header-menu-bottom-inner.open {
     margin    : 0;
     margin-top: 4px;
     width     : 27px;
-    height    : 27px;
+    min-height: 27px;
     right     : 40px
   }
 
@@ -624,11 +625,9 @@ body.touch .header-menu-bottom-inner.open {
   }
 
   .header-menu-top-logo {
-    margin-left     : 200px;
-    padding-bottom  : 69px;
-    background-image: url(../img/header/header-logo-1024.png);
-    width           : 188px;
-    height          : 42px
+    margin-left   : 199px;
+    padding-bottom: 17px;
+    margin-top    : 30px;
   }
 
   .header-menu-top-total {
@@ -693,11 +692,12 @@ body.touch .header-menu-bottom-inner.open {
     margin-top           : 113px;
     margin-left          : 5px;
     width                : 257px;
-    height               : 60px;
+    min-height           : 60px;
+    padding              : 1px 1px 1px 13px;
     border               : none;
     outline              : 0;
     background-position-x: 84px;
-    background-position-y: 24px;
+    background-position-y: 23px;
     background-color     : transparent;
     border               : 2px solid var(--moderateviolet);
     box-sizing           : border-box;
@@ -741,8 +741,8 @@ body.touch .header-menu-bottom-inner.open {
   }
 
   .header-menu-top-total-right__text {
+    padding      : 0px 1px 1px 1px;
     margin-bottom: 40px;
-    margin-top   : 1px;
     color        : var(--white)
   }
 
@@ -914,7 +914,7 @@ body.touch .header-menu-bottom-inner.open {
 
 @media(max-width:745px) {
   .simplebar-track.simplebar-vertical {
-    opacity: 0;
+    opacity: 0
   }
 
   .header-menu-top-total-left {
@@ -931,7 +931,7 @@ body.touch .header-menu-bottom-inner.open {
 
   .header-menu-top-total-right__img {
     width : 350px;
-    height: 100px;
+    height: 100px
   }
 
   .header-menu-top-total-right__list {
@@ -972,11 +972,6 @@ body.touch .header-menu-bottom-inner.open {
   .simplebar-scrollbar:before {
     width : 14px;
     height: 14px
-  }
-
-  .header-menu-top-logo {
-    width          : 143px;
-    background-size: contain
   }
 
   .header-menu-searh__btn {
@@ -1072,7 +1067,7 @@ body.touch .header-menu-bottom-inner.open {
 
 @media(max-width:478px) {
   .simplebar-track.simplebar-vertical {
-    opacity: 1;
+    opacity: 1
   }
 
   .header-menu-top-total-right__img {
@@ -1100,21 +1095,23 @@ body.touch .header-menu-bottom-inner.open {
   .header-menu-top-btn {
     margin-top: 41px
   }
+
+  .header-menu-top-logo__img {
+    width : 97px;
+    height: 22px;
+  }
 }
 
 @media(max-width:330px) {
   .header--active {
-    background   : linear-gradient(to bottom, var(--black) 40%, rgba(var(--black--rgb), 0.4) 100%);
-    /* transition: 0.8s ease; */
+    background: linear-gradient(to bottom, var(--black) 40%, rgba(var(--black--rgb), 0.4) 100%)
   }
 
   .header-menu-top-logo {
     margin        : 0;
     margin-top    : 12px;
-    margin-right  : 13px;
-    height        : 21.6px;
-    width         : 97px;
-    padding-bottom: 33px
+    margin-right  : 15px;
+    padding-bottom: 0px
   }
 
   .header-menu-burger:before {
@@ -1140,7 +1137,7 @@ body.touch .header-menu-bottom-inner.open {
   .header-menu-searh__btn {
     width: 14.5px;
     right: 6px;
-    top  : 4px
+    top  : 6px;
   }
 
   .header-menu-searh__btn--active {

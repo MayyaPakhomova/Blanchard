@@ -12,7 +12,7 @@
   z-index            : 1;
   display            : flex;
   transition-property: transform;
-  box-sizing         : content-box;
+  box-sizing         : content-box
 }
 
 .editions-right-swiper-slide {
@@ -22,53 +22,53 @@
   width              : 100%;
   height             : 100%;
   position           : relative;
-  transition-property: transform;
+  transition-property: transform
 }
 
 .editions-grid {
   position: relative;
   display : flex;
-  padding : 80px 64px 0px 58px;
+  padding : 80px 64px 0 58px
 }
 
 .editions-categories-header__spoiler {
-  display: none;
+  display: none
 }
 
 .editions-left {
   position: relative;
-  flex    : 0 0 29.5%;
+  flex    : 0 0 29.5%
 }
 
 .editions-right {
-  margin-top: 16px;
+  margin-top: 16px
 }
 
 .editions-right-swiper-container {
   width   : 1150px;
   height  : 594px;
-  overflow: hidden;
+  overflow: hidden
 }
 
 .editions-left__header {
   padding-left: 42px;
-  color       : var(--white);
+  color       : var(--white)
 }
 
 .editions-categories {
   display       : flex;
-  flex-direction: column;
+  flex-direction: column
 }
 
 .editions-categories-header {
   margin-left: 45px;
   padding-top: 16px;
   font-weight: 700;
-  color      : var(--white);
+  color      : var(--white)
 }
 
 .editions-categories-header::after {
-  content: ':';
+  content: ':'
 }
 
 .editions-categories-left-label,
@@ -76,43 +76,43 @@
 .editions-categories-centr-label {
   margin-left: 30px;
   position   : relative;
-  cursor     : pointer;
+  cursor     : pointer
 }
 
 .editions-categories-left,
 .editions-categories-right,
 .editions-categories-centr {
   display       : flex;
-  flex-direction: column;
+  flex-direction: column
 }
 
 .check {
-  opacity: 0;
+  opacity: 0
 }
 
 .name {
   margin-left: 9px;
-  color      : var(--white);
+  color      : var(--white)
 }
 
 .check:hover+.tick {
-  border: 1px solid var(--softviolet);
+  border: 1px solid var(--softviolet)
 }
 
 .check:hover~.name {
-  color: var(--softviolet);
+  color: var(--softviolet)
 }
 
 .name:focus {
-  outline: 2px solid var(--darkmoderateviolet);
+  outline: 2px solid var(--darkmoderateviolet)
 }
 
 .check:active+.tick {
-  border: 1px solid var(--darkmoderateviolet);
+  border: 1px solid var(--darkmoderateviolet)
 }
 
 .check:active~.name {
-  color: var(--darkmoderateviolet);
+  color: var(--darkmoderateviolet)
 }
 
 .tick {
@@ -120,10 +120,10 @@
   display  : inline-block;
   left     : 0;
   top      : 4px;
-  transform: translateY(-30%);
+  transform: translatey(-30%);
   width    : 12px;
   height   : 12px;
-  border   : 1px solid var(--white);
+  border   : 1px solid var(--white)
 }
 
 .tick::before {
@@ -136,32 +136,32 @@
   background-color: var(--softviolet);
   border-radius   : 100%;
   opacity         : 0;
-  transition      : .3s;
+  transition      : .3s
 }
 
 .check:checked+.tick::before {
-  opacity: 1;
+  opacity: 1
 }
 
 .check:checked+.tick {
-  border: 1px solid var(--softviolet);
+  border: 1px solid var(--softviolet)
 }
 
 .check:checked~.name {
-  color: var(--softviolet);
+  color: var(--softviolet)
 }
 
 .editions-centr {
   position: absolute;
   bottom  : 82px;
-  left    : 46px;
+  left    : 46px
 }
 
 .editions-price {
   width        : 341px;
-  height       : 40px;
+  min-height   : 40px;
   border-radius: 6px;
-  border       : 1px solid var(--white);
+  border       : 1px solid var(--white)
 }
 
 .editions-price__input {
@@ -173,57 +173,57 @@
   width           : 82px;
   height          : 38px;
   background-color: rgba(var(--moderateviolet--rgb), 0.5);
-  color           : var(--white);
+  color           : var(--white)
 }
 
 .editions-price__span {
-  color: var(--white);
+  color: var(--white)
 }
 
 .span-1 {
-  margin: 0 9px 14px 18px;
+  margin: 0 9px 14px 18px
 }
 
 .span-2 {
-  margin: 0 8px 1px 6px;
+  margin: 0 8px 1px 6px
 }
 
 .span-3 {
-  padding-left: 6px;
+  padding-left: 6px
 }
 
 .editions-right-swipe-books__name {
   color      : var(--white);
   font-weight: 700;
   font-size  : 16px;
-  line-height: 22px;
+  line-height: 22px
 }
 
 .editions-name-five::after {
-  content: 'ки в граф...';
+  content: 'ки в граф...'
 }
 
 .editions-name-six::after {
-  content: 'ических ст...';
+  content: 'ических ст...'
 }
 
 .editions-name-seven::after {
-  content: 'зуальное в...';
+  content: 'зуальное в...'
 }
 
 .editions-author-four::after {
-  content: 'димир';
+  content: 'димир'
 }
 
 .editions-author-five::after {
-  content: 'нн,Йозеф';
+  content: 'нн,Йозеф'
 }
 
 .editions-right-swipe-books__author {
   color      : var(--white);
   font-weight: 400;
   font-size  : 16px;
-  line-height: 22px;
+  line-height: 22px
 }
 
 .editions-right-swipe-books-price {
@@ -233,46 +233,46 @@
   font-size   : 16px;
   line-height : 22px;
   margin-right: 2px;
-  margin-top  : 2px;
-
+  margin-top  : 2px
 }
 
 .editions-right-swiper-image {
-  height: 390px;
+  height: 390px
 }
 
 .editions-right-swiper-info {
   display        : flex;
   justify-content: space-between;
-  margin-top     : 26px;
+  margin-top     : 26px
 }
 
 .editions-right-swipe-books-btn {
   margin-top      : 14px;
-  padding-bottom  : 6px;
-  width           : 120px;
-  height          : 40px;
+  padding         : 1px 1px 6px 1px;
+  min-width       : 120px;
+  min-height      : 40px;
+  width           : fit-content;
   background-color: transparent;
   outline         : none;
-  text-align      : center;
   border-radius   : 100px;
   font-weight     : 700;
   line-height     : 22px;
   border          : 2px solid var(--moderateviolet);
   color           : var(--white);
-  cursor          : pointer;
+  cursor          : pointer
 }
 
 .editions-right-swipe-books-btn:hover {
   background-color: var(--moderateviolet);
+  transition      : 0.5s ease-in-out;
 }
 
 .editions-right-swipe-books-btn:active {
-  border: 3px solid var(--verysoftviolet);
+  border: 3px solid var(--verysoftviolet)
 }
 
 .editions-right-swipe-books-btn__text:focus {
-  outline: 2px solid var(--moderateviolet);
+  outline: 2px solid var(--moderateviolet)
 }
 
 .editions-right-swiper-button__prev,
@@ -285,29 +285,29 @@
   height             : 30px;
   border-radius      : 30px;
   background-position: center;
-  background-repeat  : no-repeat;
+  background-repeat  : no-repeat
 }
 
 .editions-right-swiper-button__prev {
   background-image: url(../img/editions/left-ctr.png);
-  cursor          : pointer;
+  cursor          : pointer
 }
 
 .editions-right-swiper-button__next {
   background-image: url(../img/editions/right-str.png);
-  cursor          : pointer;
+  cursor          : pointer
 }
 
 .editions-right-swiper-button {
   width          : 130px;
   display        : flex;
   justify-content: space-between;
-  padding-top    : 17px;
+  padding-top    : 17px
 }
 
 .editions-right-swiper-button__prev::after,
 .editions-right-swiper-button__next::after {
-  display: none;
+  display: none
 }
 
 .editions-right-swiper-button__pagination {
@@ -315,265 +315,264 @@
   width    : 40px;
   position : relative;
   font-size: 16px;
-  color    : var(--white);
+  color    : var(--white)
 }
 
 .editions-centr-cost {
   position: absolute;
   color   : var(--white);
-  bottom  : 49px;
+  bottom  : 49px
 }
 
-@media(max-width: 1700px) {
+@media(max-width:1700px) {
   .editions-right-swiper-container {
-    width: 700px;
+    width: 700px
   }
 
   .editions-left {
-    position: static;
+    position: static
   }
 
   .editions-grid {
-    padding: 80px 0px 71px 0px;
+    padding: 80px 0 71px 0
   }
 
   .editions-centr {
     right : 40px;
     top   : 104px;
     left  : auto;
-    bottom: auto;
+    bottom: auto
   }
 }
 
-@media(max-width: 1024px) {
-
+@media(max-width:1024px) {
   .editions-name-five::after {
-    content: '...';
+    content: '...'
   }
 
   .editions-name-six::after {
-    content: '...';
+    content: '...'
   }
 
   .editions-name-seven::after {
-    content: '...';
+    content: '...'
   }
 
   .editions-author-four::after {
-    content: '...';
+    content: '...'
   }
 
   .editions-author-five::after {
-    content: '...';
+    content: '...'
   }
 
   .editions-right-swiper-image {
-    height: 320px;
+    height: 320px
   }
 
   .editions-price__input {
-    padding-top: 0;
+    padding-top: 0
   }
 
   .editions-right-swiper-info {
-    margin-top: 12px;
+    margin-top: 12px
   }
 
   .span-1 {
-    margin: 0 7px 14px 18px;
+    margin: 0 7px 14px 18px
   }
 
   .editions-right-swiper-container {
     width : 629px;
-    height: 513px;
+    height: 513px
   }
 
   .editions-grid {
-    padding: 79px 6px 0px 0px;
+    padding: 79px 6px 0 0
   }
 
   .editions-right-swiper-button {
-    padding-top: 19px;
+    padding-top: 19px
   }
 
   .editions-categories-left-label,
   .editions-categories-right-label,
   .editions-categories-centr-label {
-    margin-left: 22px;
+    margin-left: 22px
   }
 
   .editions-categories-header {
     margin-left: 39px;
     padding-top: 16px;
+    font-size  : 16px;
   }
 
   .editions-left__header {
-    padding-left: 36px;
+    padding-left: 36px
   }
 
   .editions {
     margin-top      : 80px;
-    background-image: url(../img/editions/birmingham-museums-1024.jpg);
+    background-image: url(../img/editions/birmingham-museums-1024.jpg)
   }
 
   .editions-centr-cost {
     position: absolute;
-    color   : var(--white);
+    color   : var(--white)
   }
 
   .editions-right-swipe-books-btn {
-    margin-top: 16px;
+    margin-top: 16px
   }
 
   .editions-right-swipe-books-price {
-    margin-right: 3px;
+    margin-right: 3px
   }
 
   .editions-right {
-    margin-left: 42px;
+    margin-left: 42px
   }
 
   .editions-centr-cost {
     bottom: 3px;
-    right : 358px;
+    right : 358px
   }
-
 }
 
-@media(max-width: 1000px) {
+@media(max-width:1000px) {
   .editions {
-    background-image: url(../img/editions/birmingham-museums-trus768.jpg);
+    background-image: url(../img/editions/birmingham-museums-trus768.jpg)
   }
 
   .editions-grid {
-    flex-direction: column;
+    flex-direction: column
   }
 
   .editions-right {
-    margin-left: 0px;
+    margin-left: 0
   }
 
   .editions-categories {
-    flex-direction: row;
+    flex-direction: row
   }
 }
 
-@media(max-width: 768px) {
+@media(max-width:768px) {
   .editions-right {
     margin-top : 137px;
-    margin-left: 2px;
+    margin-left: 2px
   }
 
   .editions-right-swipe-books-btn {
-    margin-top: 17px;
+    margin-top: 17px
   }
 
   .editions-price__input {
-    padding-top : 0px;
-    padding-left: 10px;
+    padding-top : 0;
+    padding-left: 10px
   }
 
   .editions-centr {
     right: auto;
     top  : 385px;
-    left : 39px;
+    left : 39px
   }
 
   .editions-centr-cost {
     color : var(--white);
     bottom: 47px;
-    left  : 2px;
+    left  : 2px
   }
 
   .editions-grid {
-    padding: 79px 0px 0px 0px;
+    padding: 79px 0 0 0
   }
 
   .editions {
-    margin-top: 85px;
+    margin-top: 85px
   }
 
   .editions-categories-centr {
-    margin-left: 18px;
+    margin-left: 18px
   }
 
   .editions-right-swiper-button {
     padding-top: 18px;
     margin-left: 30px;
-    width      : 133px;
+    width      : 133px
   }
 
   .editions-categories-right {
-    margin-left: 14px;
+    margin-left: 14px
   }
 
   .editions-right-swiper-container {
     width      : 614px;
     height     : 511px;
-    margin-left: 66px;
+    margin-left: 66px
   }
 
   .editions-right-swiper-info {
-    margin-top: 12px;
+    margin-top: 12px
   }
 
   .editions-right-swipe-books-price {
     margin-right: 2px;
-    margin-top  : 0;
+    margin-top  : 0
   }
 }
 
-@media(max-width: 723px) {
+@media(max-width:723px) {
   .editions {
-    background-size: cover;
+    background-size: cover
   }
 
   .editions-grid {
-    padding-top: 50px;
+    padding-top: 50px
   }
 
   .editions-right {
-    margin-top: 0px;
+    margin-top: 0
   }
 
   .editions-right-swiper-container {
     margin: 0;
     width : 100%;
-    height: auto;
+    height: auto
   }
 
   .editions-right-swiper-slide {
     flex        : 0 0 43%;
     margin-right: 29px;
-    margin-top  : 30px;
+    margin-top  : 30px
   }
 
   .editions-right-swiper {
     display       : flex;
     flex-direction: row;
-    flex-wrap     : wrap;
+    flex-wrap     : wrap
   }
 
   .editions-right-swiper-button {
-    display: none;
+    display: none
   }
 
   .editions-centr {
     position  : static;
-    margin-top: 20px;
+    margin-top: 20px
   }
 
   .editions-centr-cost {
-    position: static;
+    position: static
   }
 
   .editions-categories {
     flex-direction: column;
-    width         : 300px;
+    width         : 300px
   }
 
   .editions-categories-header::after {
-    content: '';
+    content: ''
   }
 
   .editions-categories-header {
@@ -584,24 +583,25 @@
     background-position-y: 14px;
     background-size      : 12px;
     width                : 279px;
+    font-size            : 16px;
     margin-left          : 22px;
     padding-left         : 11px;
     border-bottom        : 1px solid rgba(var(--white--rgb), 0.5);
     border-top           : 1px solid rgba(var(--white--rgb), 0.5);
-    cursor               : pointer;
+    cursor               : pointer
   }
 
   .editions-categories-header--active {
-    background-image: url(../img/catalog/tick-open-active.png);
+    background-image: url(../img/catalog/tick-open-active.png)
   }
 
   label {
-    display: none;
+    display: none
   }
 
   .label--active {
     display      : flex;
-    border-bottom: 1px solid rgba(var(--white--rgb), 0.5);
+    border-bottom: 1px solid rgba(var(--white--rgb), 0.5)
   }
 
   .design {
@@ -610,121 +610,122 @@
     background-repeat    : no-repeat;
     background-position-x: 264px;
     background-position-y: 9px;
-    border-bottom        : 1px solid rgba(var(--white--rgb), 0.5);
+    border-bottom        : 1px solid rgba(var(--white--rgb), 0.5)
   }
 
   .design--active {
-    background-image: none;
+    background-image: none
   }
 
   .editions-categories-centr,
   .editions-categories-right {
-    margin-left: 0px;
+    margin-left: 0
   }
 
   .editions-right-swiper-image {
-    height: auto;
+    height: auto
   }
 
   .tick {
-    top: 15px;
+    top: 15px
   }
 }
 
-@media(max-width: 480px) {
+@media(max-width:480px) {
   .editions-grid {
-    padding-top: 50px;
+    padding-top: 50px
   }
 
   .editions-name-five::after {
-    content: 'ки...';
+    content: 'ки...'
   }
 
   .editions-name-six::after {
-    content: 'ич...';
+    content: 'ич...'
   }
 
   .editions-name-seven::after {
-    content: 'зуа...';
+    content: 'зуа...'
   }
 
   .editions-author-four::after {
-    content: 'ди...';
+    content: 'ди...'
   }
 
   .editions-author-five::after {
-    content: 'нн...';
+    content: 'нн...'
   }
 
   .editions-right-swiper-info {
     flex-direction: column;
-    margin-top    : 7px;
+    margin-top    : 8px
   }
 
   .editions-right-swiper-slide {
     margin-right: 0;
-    margin-top  : 20px;
+    margin-top  : 20px
   }
 
   .editions-right-swiper-slide:nth-child(odd) {
     margin-right: 30px;
-    margin-left : 3px;
-
+    margin-top  : 19px;
+    margin-left : 3px
   }
 
   .editions-price {
     width      : 290px;
     margin-top : 5px;
-    margin-left: 5px;
+    margin-left: 5px
   }
 
   .editions-right-swipe-books__name,
   .editions-right-swipe-books__author,
   .editions-right-swipe-books-price {
     font-size  : 12px;
-    line-height: 16px;
+    line-height: 16px
   }
 
   .editions-right-swipe-books-btn {
-    margin-top   : 13px;
-    width        : 130px;
-    font-size    : 12px;
-    line-height  : 16px;
-    padding-right: 8px;
-    margin-bottom: 29px;
+    margin-top    : 12px;
+    min-width     : 130px;
+    font-size     : 12px;
+    line-height   : 16px;
+    padding-right : 2px;
+    padding-bottom: 4px;
+    margin-bottom : 29px
   }
 
   .editions-right-swipe-books-price {
-    margin-top: 2px;
+    margin-top: 2px
   }
 
   .editions {
-    margin-top: 41px;
+    margin-top: 41px
   }
 
   .editions-left__header {
     font-weight : normal;
     font-size   : 28px;
     line-height : 38px;
-    padding-left: 2px;
+    padding-left: 2px
   }
 
   .editions-categories-header {
     margin-left          : 5px;
-    padding-left         : 0px;
+    padding-left         : 0;
     margin-top           : 12px;
     padding-top          : 2px;
     padding-bottom       : 4px;
     width                : 290px;
     background-position-y: 17px;
-    background-position-x: 278px;
+    background-position-x: 278px
   }
 
   .design {
     width                : 290px;
     margin-left          : 5px;
     background-position-x: 277px;
-    background-position-y: 13px;
+    background-position-y: 13px
   }
 
   .editions-categories-left-label,
@@ -733,45 +734,44 @@
     width                : 290px;
     margin-left          : 5px;
     background-position-x: 277px;
-    background-position-y: 13px;
+    background-position-y: 13px
   }
 
   .tick {
     left: -13px;
-    top : 17px;
+    top : 17px
   }
 
   .name {
-    margin-left   : 0px;
+    margin-left   : 0;
     margin-top    : 2px;
-    padding-bottom: 4px;
+    padding-bottom: 4px
   }
 
   .editions-centr-cost {
     position   : static;
-    margin-left: 6px;
+    margin-left: 6px
   }
 
   .span-1 {
-    margin: 0px 2px 12px 15px;
+    margin: 0 2px 12px 15px
   }
 
   .span-2 {
-    margin: 0 5px 1px 3px;
+    margin: 0 5px 1px 3px
   }
 
   .span-3 {
-    padding-left: 2px;
+    padding-left: 2px
   }
 
   .editions-price__input {
     padding-left: 7px;
-    padding-top : 0px;
-    width       : 70px;
+    padding-top : 0;
+    width       : 70px
   }
 
   .editions-right-swiper {
-    padding-bottom: 21px;
-
+    padding-bottom: 21px
   }
 }
