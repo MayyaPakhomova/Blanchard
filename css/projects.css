@@ -82,9 +82,12 @@
   left: 98px
 }
 
-.projects-tooltip__marker:hover+.projects-tooltip__popur,
-.projects-tooltip__marker:focus+.projects-tooltip__popur {
-  opacity: 1
+@media (hover: hover) and (pointer: fine) {
+
+  .projects-tooltip__marker:hover+.projects-tooltip__popur,
+  .projects-tooltip__marker:focus+.projects-tooltip__popur {
+    opacity: 1
+  }
 }
 
 .projects__link {
@@ -92,12 +95,14 @@
   font-weight: 600
 }
 
-.projects__link:focus {
-  outline: 1px solid var(--darkmoderateviolet)
+@media (hover: hover) and (pointer: fine) {
+  .projects__link:hover {
+    border-bottom: 1px solid var(--moderateviolet)
+  }
 }
 
-.projects__link:hover {
-  border-bottom: 1px solid var(--moderateviolet)
+.projects__link:focus {
+  outline: 1px solid var(--darkmoderateviolet)
 }
 
 .projects__link:active {
@@ -200,9 +205,15 @@
 
 }
 
-.projects-bottom-slide__card:hover {
-  filter    : grayscale(0) opacity(1);
-  transition: 0.5s ease-in-out;
+@media (hover: hover) and (pointer: fine) {
+  .projects-bottom-slide__card:hover {
+    filter    : grayscale(0) opacity(1);
+    transition: 0.5s ease-in-out;
+  }
+}
+
+.projects-bottom-slide__card:active {
+  filter: grayscale(0) opacity(1);
 }
 
 .projects-bottom-container {
@@ -233,15 +244,17 @@
   border: 2px solid var(--darkmoderateviolet)
 }
 
-.projects-bottom-prev:hover {
-  background-image: url(../img/projects/right-active.png);
-  background-color: var(--darkmoderateviolet)
-}
+@media (hover: hover) and (pointer: fine) {
+  .projects-bottom-prev:hover {
+    background-image: url(../img/projects/right-active.png);
+    background-color: var(--darkmoderateviolet)
+  }
 
-.projects-bottom-next:hover {
-  background-image: url(../img/projects/right-active.png);
-  background-color: var(--darkmoderateviolet);
-  transform       : scalex(-1)
+  .projects-bottom-next:hover {
+    background-image: url(../img/projects/right-active.png);
+    background-color: var(--darkmoderateviolet);
+    transform       : scalex(-1)
+  }
 }
 
 .projects-bottom-prev:active {
@@ -408,14 +421,14 @@
 }
 
 @media(max-width:880px) {
-  .projects-bottom-slide__card:hover {
+  /* .projects-bottom-slide__card:hover {
     filter: grayscale(1) opacity(0.3);
-  }
+  } */
 
-  .projects-bottom-slide__card:active {
-    filter    : grayscale(0) opacity(1);
-    transition: 0.5s ease-in-out;
-  }
+  /* .projects-bottom-slide__card:active {
+    filter: grayscale(0) opacity(1);
+
+  } */
 
   .popur-one {
     left: -224px

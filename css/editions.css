@@ -95,12 +95,14 @@
   color      : var(--white)
 }
 
-.check:hover+.tick {
-  border: 1px solid var(--softviolet)
-}
+@media (hover: hover) and (pointer: fine) {
+  .check:hover+.tick {
+    border: 1px solid var(--softviolet)
+  }
 
-.check:hover~.name {
-  color: var(--softviolet)
+  .check:hover~.name {
+    color: var(--softviolet)
+  }
 }
 
 .name:focus {
@@ -262,9 +264,11 @@
   cursor          : pointer
 }
 
-.editions-right-swipe-books-btn:hover {
-  background-color: var(--moderateviolet);
-  transition      : 0.5s ease-in-out;
+@media (hover: hover) and (pointer: fine) {
+  .editions-right-swipe-books-btn:hover {
+    background-color: var(--moderateviolet);
+    transition      : 0.5s ease-in-out;
+  }
 }
 
 .editions-right-swipe-books-btn:active {

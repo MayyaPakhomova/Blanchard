@@ -42,10 +42,7 @@
   margin-right: 16px;
   margin-top  : 4px;
   font-weight : 600;
-  font-size   : 12px;
-  line-height : 16px;
   text-align  : right;
-  color       : var(--gray60)
 }
 
 .events-slide__big-text {

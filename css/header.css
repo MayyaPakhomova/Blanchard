@@ -51,13 +51,15 @@
   color      : var(--white)
 }
 
-.header-menu-top-total-left__link:focus {
-  outline: 2px solid var(--darkmoderateviolet)
+@media (hover: hover) and (pointer: fine) {
+  .header-menu-top-total-left__link:hover {
+    color  : var(--softviolet);
+    outline: transparent
+  }
 }
 
-.header-menu-top-total-left__link:hover {
-  color  : var(--softviolet);
-  outline: transparent
+.header-menu-top-total-left__link:focus {
+  outline: 2px solid var(--darkmoderateviolet)
 }
 
 .header-menu-top-total-left__link:active {
@@ -80,14 +82,16 @@
   line-height        : 25px
 }
 
-.header-menu-top-btn:focus {
-  outline: 2px solid var(--darkmoderateviolet)
+@media (hover: hover) and (pointer: fine) {
+  .header-menu-top-btn:hover {
+    color           : var(--softviolet);
+    background-image: url(../img/header/vector-purple.png);
+    outline         : transparent
+  }
 }
 
-.header-menu-top-btn:hover {
-  color           : var(--softviolet);
-  background-image: url(../img/header/vector-purple.png);
-  outline         : transparent
+.header-menu-top-btn:focus {
+  outline: 2px solid var(--darkmoderateviolet)
 }
 
 .header-menu-top-btn:active {
@@ -135,6 +139,14 @@
   background-position: right
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .header-menu-bottom__item:hover {
+    color           : var(--softviolet);
+    outline         : transparent;
+    background-image: url(../img/header/tick-purple.png)
+  }
+}
+
 .header-menu-bottom__item:focus {
   outline: 2px solid var(--darkmoderateviolet)
 }
@@ -144,12 +156,6 @@
   outline              : transparent;
   background-image     : url(../img/header/tick-active.png);
   background-position-y: 10px
-}
-
-.header-menu-bottom__item:hover {
-  color           : var(--softviolet);
-  outline         : transparent;
-  background-image: url(../img/header/tick-purple.png)
 }
 
 .header-menu-bottom-inner {
@@ -176,9 +182,11 @@
   color     : var(--white)
 }
 
-.header-menu-bottom-inner__link:hover {
-  background-color     : rgba(var(--softviolet--rgb), 0.4);
-  background-blend-mode: overlay, color
+@media (hover: hover) and (pointer: fine) {
+  .header-menu-bottom-inner__link:hover {
+    background-color     : rgba(var(--softviolet--rgb), 0.4);
+    background-blend-mode: overlay, color
+  }
 }
 
 .header-menu-bottom-inner__link:active {
@@ -191,8 +199,10 @@
   background-blend-mode: overlay, color
 }
 
-body.mouse .header-menu-bottom__list>li:hover .header-menu-bottom-inner {
-  display: block
+@media (hover: hover) and (pointer: fine) {
+  body.mouse .header-menu-bottom__list>li:hover .header-menu-bottom-inner {
+    display: block
+  }
 }
 
 body.mouse .header-menu-bottom__list>li:active .header-menu-bottom-inner {
@@ -402,14 +412,16 @@ body.touch .header-menu-bottom-inner.open {
   cursor          : pointer
 }
 
-.header-menu-searh:hover .header-menu-searh__input {
-  caret-color  : var(--softviolet);
-  border-bottom: 2px solid var(--softviolet)
-}
+@media (hover: hover) and (pointer: fine) {
+  .header-menu-searh:hover .header-menu-searh__input {
+    caret-color  : var(--softviolet);
+    border-bottom: 2px solid var(--softviolet)
+  }
 
-.header-menu-searh:hover .header-menu-searh__btn {
-  background-image : url(../img/header/search-activ.png);
-  background-repeat: no-repeat
+  .header-menu-searh:hover .header-menu-searh__btn {
+    background-image : url(../img/header/search-activ.png);
+    background-repeat: no-repeat
+  }
 }
 
 .header-menu-searh:focus {
@@ -556,23 +568,22 @@ body.touch .header-menu-bottom-inner.open {
     left: 0
   }
 
-  .header-menu-searh:hover .header-menu-searh__input {
-    caret-color  : transparent;
-    border-bottom: 1px solid rgba(var(--white--rgb), 0.85)
-  }
+  @media (hover: hover) and (pointer: fine) {
+    .header-menu-searh:hover .header-menu-searh__input {
+      caret-color  : transparent;
+      border-bottom: 1px solid rgba(var(--white--rgb), 0.85)
+    }
 
-  .header-menu-searh:hover .header-menu-searh__btn {
-    background-image : url(../img/header/search-1920.png);
-    background-repeat: no-repeat
+    .header-menu-searh:hover .header-menu-searh__btn {
+      background-image : url(../img/header/search-1920.png);
+      background-repeat: no-repeat
+    }
   }
 
   .header-menu-searh:focus {
     outline: 2px solid transparent
   }
 
-  .header-menu-searh:hover {
-    outline: 2px solid transparent
-  }
 
   .header-menu-searh:active .header-menu-searh__btn {
     background-image : url(../img/header/search-1920.png);
@@ -819,10 +830,6 @@ body.touch .header-menu-bottom-inner.open {
 
   .header-menu-searh__close:after {
     transform: rotate(-45deg)
-  }
-
-  .header-menu-searh:hover {
-    outline: 2px solid transparent
   }
 
   .header-menu-searh:focus .header-menu-searh__btn {

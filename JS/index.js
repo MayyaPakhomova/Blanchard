@@ -546,3 +546,46 @@ ymaps.ready(function () {
   myMap.behaviors.disable('scrollZoom')
 });
 
+
+
+const btns = document.querySelectorAll('.gallery-swiper-slide');
+const modalOverlay = document.querySelector('.gallery-right-modal ');
+const modals = document.querySelectorAll('.gallery-modal-card');
+
+btns.forEach((el) => {
+  el.addEventListener('click', (e) => {
+    let path = e.currentTarget.getAttribute('data-path');
+
+    modals.forEach((el) => {
+      el.classList.remove('gallery-modal-card--visible');
+    });
+
+    document.querySelector(`[data-target="${path}"]`).classList.add('gallery-modal-card--visible');
+    modalOverlay.classList.add('gallery-right-modal--visible');
+  });
+});
+
+modalOverlay.addEventListener('click', (e) => {
+  console.log(e.target);
+
+  if (e.target == modalOverlay) {
+    modalOverlay.classList.remove('gallery-right-modal--visible');
+    modals.forEach((el) => {
+      el.classList.remove('gallery-modal-card--visible');
+    });
+  }
+});
+// document.querySelector('.gallery-modal-card-close').addEventListener('click', function () {
+//   classList.remove('gallery-modal-card--visible');
+// });
+
+let galleryRight = document.querySelectorAll('.gallery-modal-card-close');
+function f2() {
+  for (let i = 0; i < galleryRight.length; i++) {
+    galleryRight[i].classList.remove('gallery-modal-card--visible');
+    f2.preventDefault();
+  }
+}
+document.querySelector('.gallery-modal-card-close').onclick = f2;
+
+

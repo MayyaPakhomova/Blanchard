@@ -1,3 +1,193 @@
+.gallery-right-modal {
+  position       : fixed;
+  left           : 0;
+  top            : 0;
+  right          : 0;
+  bottom         : 0;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  height         : 100vh;
+  width          : 100%;
+  opacity        : 0;
+  visibility     : hidden;
+  transition     : all 0.7s linear;
+  z-index        : 250;
+}
+
+.gallery-modal-card {
+  position        : absolute;
+  background-color: var(--white);
+  width           : 900px;
+  align-items     : center;
+  justify-content : center;
+  opacity         : 0;
+}
+
+.gallery-right-modal--visible {
+  opacity   : 1;
+  visibility: visible;
+  transform : translateX(13%) translateY(10%);
+
+}
+
+.gallery-modal-card--visible {
+  opacity: 1;
+}
+
+
+.gallery-modal-card-wrapper {
+  display : flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-modal-card-close {
+  position : absolute;
+  color    : var(--gray60);
+  font-size: 24px;
+  right    : 10px;
+}
+
+.gallery-modal-card-img {
+  width            : 40%;
+  background-repeat: no-repeat;
+  background-size  : cover;
+}
+
+.gallery-modal-card-text {
+  padding: 130px 30px 130px 48px;
+  width  : 59%;
+}
+
+.gallery-modal-card-text__name {
+  font-weight: 600;
+}
+
+.img1 {
+  background-image: url(../img/gallery/gal.320.01.jpg);
+}
+
+.img2 {
+  background-image: url(../img/gallery/gal.320.02.jpg);
+}
+
+.img3 {
+  background-image: url(../img/gallery/gal.320.03.jpg);
+}
+
+.img4 {
+  background-image: url(../img/gallery/gal.320.04.jpg);
+}
+
+.img5 {
+  background-image: url(../img/gallery/gal.320.05.jpg);
+}
+
+.img6 {
+  background-image: url(../img/gallery/gal.320.06.jpg);
+}
+
+.img7 {
+  background-image: url(../img/gallery/gal.320.07.jpg);
+}
+
+.img8 {
+  background-image: url(../img/gallery/gal.320.08.jpg);
+}
+
+.img9 {
+  background-image: url(../img/gallery/gal.320.09.jpg);
+}
+
+.img10 {
+  background-image: url(../img/gallery/gal.320.10.jpg);
+}
+
+.img11 {
+  background-image: url(../img/gallery/gal.320.11.jpg);
+}
+
+.img12 {
+  background-image: url(../img/gallery/gal.320.12.jpg);
+}
+
+.img13 {
+  background-image: url(../img/gallery/gal.320.13.jpg);
+}
+
+.img14 {
+  background-image: url(../img/gallery/gal.320.14.jpg);
+}
+
+.img15 {
+  background-image: url(../img/gallery/gal.320.15.jpg);
+}
+
+.img16 {
+  background-image: url(../img/gallery/gal.320.16.jpg);
+}
+
+.img17 {
+  background-image: url(../img/gallery/gal.320.17.jpg);
+}
+
+.img18 {
+  background-image: url(../img/gallery/gal.320.18.jpg);
+}
+
+.img19 {
+  background-image: url(../img/gallery/gal.320.19.jpg);
+}
+
+.img20 {
+  background-image: url(../img/gallery/gal.320.20.jpg);
+}
+
+.img21 {
+  background-image: url(../img/gallery/gal.320.21.jpg);
+}
+
+.img22 {
+  background-image: url(../img/gallery/gal.320.22.jpg);
+}
+
+.img23 {
+  background-image: url(../img/gallery/gal.320.23.jpg);
+}
+
+.img24 {
+  background-image: url(../img/gallery/gal.320.24.jpg);
+}
+
+.img25 {
+  background-image: url(../img/gallery/gal.320.25.jpg);
+}
+
+.img26 {
+  background-image: url(../img/gallery/gal.320.26.jpg);
+}
+
+.img27 {
+  background-image: url(../img/gallery/gal.320.27.jpg);
+}
+
+.img28 {
+  background-image: url(../img/gallery/gal.320.28.jpg);
+}
+
+.img29 {
+  background-image: url(../img/gallery/gal.320.29.jpg);
+}
+
+.img30 {
+  background-image: url(../img/gallery/gal.320.30.jpg);
+}
+
+
+
+
+
 .gallery {
   position        : relative;
   margin-top      : 70px;
@@ -140,33 +330,37 @@
   background-position: center
 }
 
-.gallery-swiper-slide:hover:after {
-  content              : '';
-  position             : absolute;
-  top                  : 0;
-  right                : 0;
-  bottom               : 0;
-  left                 : 0;
-  margin               : 25px;
-  background-color     : rgba(var(--black--rgb), 0.5);
-  background-image     : url(../img/gallery/plus.png);
-  background-repeat    : no-repeat;
-  background-attachment: scroll;
-  background-position  : center;
-  cursor               : pointer
+@media (hover: hover) and (pointer: fine) {
+  .gallery-swiper-slide:hover:after {
+    content              : '';
+    position             : absolute;
+    top                  : 0;
+    right                : 0;
+    bottom               : 0;
+    left                 : 0;
+    margin               : 25px;
+    background-color     : rgba(var(--black--rgb), 0.5);
+    background-image     : url(../img/gallery/plus.png);
+    background-repeat    : no-repeat;
+    background-attachment: scroll;
+    background-position  : center;
+    cursor               : pointer
+  }
 }
 
 .gallery-swiper-slide__picture:active:after {
-  content              : '';
-  position             : absolute;
-  top                  : 0;
-  right                : 0;
-  bottom               : 0;
-  left                 : 0;
-  background-color     : rgba(var(--moderateviolet--rgb), 0.4);
-  background-repeat    : no-repeat;
+  content : '';
+  position: absolute;
+  top     : 0;
+  right   : 0;
+  bottom  : 0;
+  left    : 0;
+  background:
+    url(../img/gallery/plus.png) center/50px no-repeat,
+    url(../img/gallery/fon.png) center/250px no-repeat,
+    linear-gradient(0deg, rgba(var(--softviolet--rgb), 0.4), rgba(var(--softviolet--rgb), 0.4));
+  border               : 2px solid var(--verysoftviolet);
   background-attachment: scroll;
-  background-position  : center;
   cursor               : pointer
 }
 
@@ -227,6 +421,14 @@
     padding-right: 20px
   }
 
+  .gallery-right-modal--visible {
+    transform: translateX(0) translateY(0);
+  }
+
+  .gallery-modal-card-text {
+    padding: 20px;
+  }
+
   .gallery-swiper-slide:active:after {
     margin: 10px
   }
@@ -250,6 +452,8 @@
   .gallery-grid {
     padding: 19px 39px 2px 35px
   }
+
+
 
   .gallery-left__header {
     padding-top: 61px
@@ -300,6 +504,14 @@
     background-image: url(../img/gallery/birmingham-museums-trust-768.jpg)
   }
 
+  .gallery-modal-card {
+    width: 675px;
+  }
+
+  .gallery-modal-card-text__text {
+    line-height: 18px;
+  }
+
   .gallery-swiper-slide {
     height: 280px
   }
@@ -335,6 +547,18 @@
     width: 500px
   }
 
+  .gallery-modal-card {
+    width: 450px;
+  }
+
+  .gallery-modal-card-text {
+    width: 100%;
+  }
+
+  .gallery-modal-card-img {
+    display: none;
+  }
+
   .gallery-swiper-slide {
     height: 212px
   }
@@ -350,6 +574,23 @@
     display       : flex;
     flex-direction: column-reverse;
     padding-bottom: 237px
+  }
+
+  .gallery-modal-card {
+    width: 300px;
+  }
+
+  .gallery-modal-card-text__header {
+    font-size: 16px;
+  }
+
+  .gallery-modal-card-text__name {
+    font-weight: 400;
+  }
+
+  .gallery-modal-card-text__text {
+    font-size  : 12px;
+    line-height: 18px;
   }
 
   .gallery-info {

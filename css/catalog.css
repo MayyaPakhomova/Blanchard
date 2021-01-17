@@ -29,8 +29,10 @@
   margin-left: 40px;
 }
 
-.catalog-header-tab__item:hover {
-  box-shadow: 0 0 20px rgba(var(--moderateviolet--rgb), 0.7)
+@media (hover: hover) and (pointer: fine) {
+  .catalog-header-tab__item:hover {
+    box-shadow: 0 0 20px rgba(var(--moderateviolet--rgb), 0.7)
+  }
 }
 
 .france {
@@ -129,7 +131,15 @@
   flex: 0 0 49%
 }
 
-.accordion-tabs:hover {
+@media (hover: hover) and (pointer: fine) {
+  .accordion-tabs:hover {
+    text-decoration: underline;
+    color          : var(--darkmoderateviolet);
+    font-weight    : 600
+  }
+}
+
+.accordion-tabs:active {
   text-decoration: underline;
   color          : var(--darkmoderateviolet);
   font-weight    : 600
@@ -160,9 +170,6 @@
 .catalog-info__life {
   margin-top : 10px;
   margin-left: 2px;
-  font-size  : 12px;
-  line-height: 16px;
-  color      : var(--gray60)
 }
 
 .catalog-info__text {
@@ -237,7 +244,13 @@
   padding-top: 5px;
 }
 
-.acordion-section:hover {
+@media (hover: hover) and (pointer: fine) {
+  .acordion-section:hover {
+    color: var(--moderateviolet)
+  }
+}
+
+.acordion-section:active {
   color: var(--moderateviolet)
 }
 
@@ -258,16 +271,14 @@
   background-color   : var(--verylightgray)
 }
 
-.ui-state-hover .ui-icon,
-.ui-button:hover .ui-icon {
-  background-color: var(--darkmoderateviolet);
-  background-image: url(../img/catalog/tick-close-hover.png)
-}
+@media (hover: hover) and (pointer: fine) {
 
-/* .ui-icon:active {
-  background-color: var(--darkmoderateviolet);
-  background-image: url(../img/catalog/tick-open-active.png);
-} */
+  .ui-state-hover .ui-icon,
+  .ui-button:hover .ui-icon {
+    background-color: var(--darkmoderateviolet);
+    background-image: url(../img/catalog/tick-close-hover.png)
+  }
+}
 
 .ui-state-focus .ui-icon,
 .ui-button:focus .ui-icon {
@@ -281,11 +292,17 @@
   background-image: url(../img/catalog/tick-close.png)
 }
 
-.ui-icon:active,
-.ui-state-active .ui-icon,
-.ui-button:active .ui-icon {
+
+.ui-state-active .ui-icon {
   background-color: var(--verylightgray);
   background-image: url(../img/catalog/tick-open.png);
+}
+
+.ui-icon:active,
+.ui-state:active .ui-icon,
+.ui-button:active .ui-icon {
+  background-color: var(--darkmoderateviolet);
+  background-image: url(../img/catalog/tick-open-active.png);
 }
 
 .ui-widget-content {
@@ -351,10 +368,6 @@
   .catalog-header-tab {
     margin-top : 19px;
     margin-left: 43px
-  }
-
-  .catalog-header-tab__item:hover {
-    box-shadow: 0 0 20px white
   }
 
   .catalog-header-tab__item--active {

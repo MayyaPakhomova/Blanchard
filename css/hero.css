@@ -45,13 +45,15 @@
   cursor       : pointer
 }
 
-.hero-crossfade-info__btn:active {
-  border: 3px solid var(--verysoftviolet)
+@media (hover: hover) and (pointer: fine) {
+  .hero-crossfade-info__btn:hover {
+    border    : 3px solid var(--darkmoderateviolet);
+    transition: 0.5s ease-in-out;
+  }
 }
 
-.hero-crossfade-info__btn:hover {
-  border    : 3px solid var(--darkmoderateviolet);
-  transition: 0.5s ease-in-out;
+.hero-crossfade-info__btn:active {
+  border: 3px solid var(--verysoftviolet)
 }
 
 .hero-crossfade-info__btn:focus {
