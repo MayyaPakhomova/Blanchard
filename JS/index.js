@@ -1,32 +1,40 @@
 
-document.querySelector('.header-menu-top-logo').click();
+(function () {
+  let menuBottom = document.querySelector('.header-menu-bottom');
+  let bottomInner = menuBottom.querySelectorAll('.header-menu-bottom-inner');
 
-let isMobile = {
-  Android: function () { return navigator.userAgent.match(/Android/i); },
-  BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); },
-  iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
-  Opera: function () { return navigator.userAgent.match(/Opera Mini/i); },
-  Windows: function () { return navigator.userAgent.match(/IEMobile/i); },
-  any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
-};
-let body = document.querySelector('body');
-if (isMobile.any()) {
-  body.classList.add('touch');
-  let arrow = document.querySelectorAll('.arrow');
-  for (i = 0; i < arrow.length; i++) {
-    let thisLink = arrow[i].previousElementSibling;
-    let subMenu = arrow[i].nextElementSibling;
-    let thisArrow = arrow[i];
+  document.addEventListener("click", (event) => {
+    for (i = 0; i < bottomInner.length; i++) {
+      if (bottomInner[i].classList.contains('open')) {
+        bottomInner[i].classList.remove('open');
+      }
+    }
+    let headerLink = event.target.closest('li');
+    if (!headerLink) return;
+    if (headerLink.querySelector('.header-menu-bottom-inner')) {
+      let headerMenu = headerLink.querySelector('.header-menu-bottom-inner');
+      headerMenu.classList.add('open');
+    }
+  })
 
-    thisLink.classList.add('parent');
-    arrow[i].addEventListener('click', function () {
-      subMenu.classList.toggle('open');
-      thisArrow.classList.toggle('active');
-    });
-  }
-} else {
-  body.classList.add('mouse');
-}
+  document.addEventListener('click', (event) => {
+    if ((event.key == 'Tab') && (focused.classList.contains('header-menu-bottom__item'))) {
+      focused.addEventListener('click', (event) => {
+        if ((event.key == 'Enter')) {
+          for (i = 0; i < bottomInner.length; i++) {
+            if (bottomInner[i].classList.contains('open')) {
+              bottomInner[i].classList.remove('open');
+            }
+          }
+          let headerMenu = focused.querySelector('.header-menu-bottom-inner');
+          headerMenu.classList.add('open');
+        }
+      })
+    }
+  })
+
+})();
+
 
 
 // Селект
@@ -176,6 +184,7 @@ for (let smoothLink of smoothLinks) {
   });
 };
 
+
 // Каталог
 // аккордеон
 $(function () {
@@ -285,14 +294,12 @@ document.querySelector('.belgium').addEventListener('click', function () {
 });
 
 
-// кнопки-флаги
-const list = document.querySelectorAll('.catalog-header-tab__item')
-list.forEach(item => {
-  item.addEventListener('click', (e) => {
-    list.forEach(el => { el.classList.remove('catalog-header-tab__item--active'); });
-    item.classList.add('catalog-header-tab__item--active')
-  })
-});
+
+let catalogFocusTwo = document.querySelectorAll('.focus');
+for (let i = 0; i < catalogFocusTwo.length; i++)
+  catalogFocusTwo[i].addEventListener('click', function () {
+    catalogFocusTwo[i].blur();
+  });
 
 // кнопка события
 document.querySelector('.events-btn').addEventListener('click', function () {
@@ -549,7 +556,7 @@ ymaps.ready(function () {
 
 
 const btns = document.querySelectorAll('.gallery-swiper-slide');
-const modalOverlay = document.querySelector('.gallery-right-modal ');
+const modalOverlay = document.querySelector('.gallery-right-modal');
 const modals = document.querySelectorAll('.gallery-modal-card');
 
 btns.forEach((el) => {

@@ -82,32 +82,9 @@
   left: 98px
 }
 
-@media (hover: hover) and (pointer: fine) {
-
-  .projects-tooltip__marker:hover+.projects-tooltip__popur,
-  .projects-tooltip__marker:focus+.projects-tooltip__popur {
-    opacity: 1
-  }
-}
-
 .projects__link {
   color      : var(--moderateviolet);
   font-weight: 600
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .projects__link:hover {
-    border-bottom: 1px solid var(--moderateviolet)
-  }
-}
-
-.projects__link:focus {
-  outline: 1px solid var(--darkmoderateviolet)
-}
-
-.projects__link:active {
-  color        : var(--darkmoderateviolet);
-  border-bottom: 1px solid var(--darkmoderateviolet)
 }
 
 .projects-bottom {
@@ -198,22 +175,11 @@
 
 
 .projects-bottom-slide__card {
-  height: 150px;
-  border: 1px solid var(--lightgray);
-  cursor: pointer;
-  filter: grayscale(1) opacity(0.3);
-
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .projects-bottom-slide__card:hover {
-    filter    : grayscale(0) opacity(1);
-    transition: 0.5s ease-in-out;
-  }
-}
-
-.projects-bottom-slide__card:active {
-  filter: grayscale(0) opacity(1);
+  height    : 150px;
+  border    : 1px solid var(--lightgray);
+  cursor    : pointer;
+  filter    : grayscale(1) opacity(0.3);
+  transition: 0.7s linear;
 }
 
 .projects-bottom-container {
@@ -236,40 +202,6 @@
   outline            : transparent
 }
 
-.projects-bottom-prev:focus {
-  border: 2px solid var(--darkmoderateviolet)
-}
-
-.projects-bottom-next:focus {
-  border: 2px solid var(--darkmoderateviolet)
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .projects-bottom-prev:hover {
-    background-image: url(../img/projects/right-active.png);
-    background-color: var(--darkmoderateviolet)
-  }
-
-  .projects-bottom-next:hover {
-    background-image: url(../img/projects/right-active.png);
-    background-color: var(--darkmoderateviolet);
-    transform       : scalex(-1)
-  }
-}
-
-.projects-bottom-prev:active {
-  background-image: url(../img/projects/right-active.png);
-  background-color: var(--darkmoderateviolet);
-  border          : 2px solid var(--verysoftviolet)
-}
-
-.projects-bottom-next:active {
-  background-image: url(../img/projects/right-active.png);
-  background-color: var(--darkmoderateviolet);
-  transform       : scalex(-1);
-  border          : 2px solid var(--verysoftviolet)
-}
-
 .projects-bottom-next {
   background-image: url(../img/projects/left.png);
   margin-right    : 47px;
@@ -285,6 +217,51 @@
   display: flex
 }
 
+@media (hover:hover) and (pointer:fine) {
+  .projects-bottom-prev:hover {
+    background-image: url(../img/projects/right-active.png);
+    background-color: var(--darkmoderateviolet);
+  }
+
+  .projects-bottom-next:hover {
+    background-image: url(../img/projects/right-active.png);
+    background-color: var(--darkmoderateviolet);
+    transform       : scalex(-1);
+  }
+
+  .projects-bottom-slide__card:hover {
+    filter    : grayscale(0) opacity(1);
+    transition: 0.7s linear;
+  }
+
+  .projects-tooltip__marker:hover+.projects-tooltip__popur {
+    opacity: 1
+  }
+
+  .projects__link:hover {
+    border-bottom: 1px solid var(--moderateviolet)
+  }
+}
+
+.projects-tooltip__marker:focus+.projects-tooltip__popur {
+  opacity: 1
+}
+
+.projects-bottom-prev:focus {
+  border: 2px solid var(--darkmoderateviolet);
+}
+
+.projects-bottom-next:focus {
+  border: 2px solid var(--darkmoderateviolet);
+}
+
+.projects__link:focus {
+  outline: 1px solid var(--darkmoderateviolet)
+}
+
+.projects-bottom-slide__card:focus {
+  filter: grayscale(0) opacity(1);
+}
 
 @media(max-width:1400px) {
   .popur-two {
@@ -420,16 +397,31 @@
   }
 }
 
-@media(max-width:880px) {
-  /* .projects-bottom-slide__card:hover {
-    filter: grayscale(1) opacity(0.3);
-  } */
+@media(max-width:1100px) {
+  .projects__link:active {
+    color        : var(--darkmoderateviolet);
+    border-bottom: 1px solid var(--darkmoderateviolet)
+  }
 
-  /* .projects-bottom-slide__card:active {
+  .projects-bottom-slide__card:active {
     filter: grayscale(0) opacity(1);
+  }
 
-  } */
+  .projects-bottom-prev:active {
+    background-image: url(../img/projects/right-active.png);
+    background-color: var(--darkmoderateviolet);
+    border          : 2px solid var(--verysoftviolet);
+  }
 
+  .projects-bottom-next:active {
+    background-image: url(../img/projects/right-active.png);
+    background-color: var(--darkmoderateviolet);
+    transform       : scalex(-1);
+    border          : 2px solid var(--verysoftviolet);
+  }
+}
+
+@media(max-width:880px) {
   .popur-one {
     left: -224px
   }

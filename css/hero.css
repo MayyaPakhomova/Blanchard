@@ -4,7 +4,7 @@
 
 .hero-crossfade-info {
   position      : relative;
-  padding-top   : 122px;
+  padding-top   : 120px;
   padding-bottom: 121px;
   width         : 680px;
   margin-left   : 101px;
@@ -20,7 +20,7 @@
 }
 
 .hero-crossfade-info__text {
-  padding    : 13px 1px 1px 5px;
+  padding    : 17px 1px 1px 5px;
   font-weight: bold;
   font-size  : 18px;
   line-height: 30px;
@@ -42,23 +42,8 @@
   text-align   : center;
   background   : var(--moderateviolet);
   color        : var(--white);
+  transition   : 0.5s ease-in-out;
   cursor       : pointer
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .hero-crossfade-info__btn:hover {
-    border    : 3px solid var(--darkmoderateviolet);
-    transition: 0.5s ease-in-out;
-  }
-}
-
-.hero-crossfade-info__btn:active {
-  border: 3px solid var(--verysoftviolet)
-}
-
-.hero-crossfade-info__btn:focus {
-  background-color: var(--darkmoderateviolet);
-  border          : 3px solid var(--verysoftviolet)
 }
 
 #crossfade {
@@ -96,7 +81,7 @@
   backface-visibility: hidden;
   opacity            : 0;
   transform          : scale(1.4);
-  animation          : crossfade 24s infinite
+  animation          : rossfade 24s infinite
 }
 
 #crossfade span:nth-child(3) {
@@ -118,11 +103,27 @@
   }
 
   40% {
-    opacity: 0
+    opacity: 0;
   }
 }
 
+@media (hover:hover) and (pointer:fine) {
+  .hero-crossfade-info__btn:hover {
+    border    : 3px solid var(--darkmoderateviolet);
+    transition: 0.5s ease-in-out;
+  }
+}
+
+.hero-crossfade-info__btn:focus {
+  background-color: var(--darkmoderateviolet);
+  border          : 3px solid var(--verysoftviolet)
+}
+
 @media(max-width:1024px) {
+  .hero-crossfade-info__btn:active {
+    border: 3px solid var(--verysoftviolet)
+  }
+
   #crossfade {
     background-image: url(../img/hero/baner-1-1024.jpg)
   }

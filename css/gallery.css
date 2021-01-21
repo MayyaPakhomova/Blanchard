@@ -230,7 +230,8 @@
 }
 
 .gallery-info__login {
-  color: var(--darkmoderateviolet)
+  color     : var(--darkmoderateviolet);
+  transition: 0.5s ease-in-out;
 }
 
 .gallery-left-select {
@@ -330,40 +331,6 @@
   background-position: center
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .gallery-swiper-slide:hover:after {
-    content              : '';
-    position             : absolute;
-    top                  : 0;
-    right                : 0;
-    bottom               : 0;
-    left                 : 0;
-    margin               : 25px;
-    background-color     : rgba(var(--black--rgb), 0.5);
-    background-image     : url(../img/gallery/plus.png);
-    background-repeat    : no-repeat;
-    background-attachment: scroll;
-    background-position  : center;
-    cursor               : pointer
-  }
-}
-
-.gallery-swiper-slide__picture:active:after {
-  content : '';
-  position: absolute;
-  top     : 0;
-  right   : 0;
-  bottom  : 0;
-  left    : 0;
-  background:
-    url(../img/gallery/plus.png) center/50px no-repeat,
-    url(../img/gallery/fon.png) center/250px no-repeat,
-    linear-gradient(0deg, rgba(var(--softviolet--rgb), 0.4), rgba(var(--softviolet--rgb), 0.4));
-  border               : 2px solid var(--verysoftviolet);
-  background-attachment: scroll;
-  cursor               : pointer
-}
-
 .gallery-right-swiper-button {
   width          : 133px;
   display        : flex;
@@ -392,18 +359,8 @@
   background-image: url(../img/gallery/left-ctr.png)
 }
 
-.gallery-right-swiper-button__prev:focus {
-  outline: transparent;
-  border : 1px solid var(--white)
-}
-
 .gallery-right-swiper-button__next {
   background-image: url(../img/gallery/right-str.png)
-}
-
-.gallery-right-swiper-button__next:focus {
-  outline: transparent;
-  border : 1px solid var(--white)
 }
 
 .swiper-pagination-fraction {
@@ -412,6 +369,45 @@
   position : relative;
   font-size: 16px;
   color    : var(--white)
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .gallery-swiper-slide:hover:after {
+    content : '';
+    position: absolute;
+    top     : 0;
+    right   : 0;
+    bottom  : 0;
+    left    : 0;
+    margin  : 25px;
+    background:
+      url(../img/gallery/plus.png) center/79px no-repeat,
+      url(../img/gallery/fon.png) center/300px no-repeat;
+    background-repeat    : no-repeat;
+    background-attachment: scroll;
+    background-position  : center;
+    cursor               : pointer
+  }
+
+  .gallery-info__login:hover {
+    transition : 0.5s ease-in-out;
+    font-weight: 700;
+  }
+}
+
+.gallery-right-swiper-button__next:focus {
+  outline: transparent;
+  border : 1px solid var(--white)
+}
+
+.gallery-right-swiper-button__prev:focus {
+  outline: transparent;
+  border : 2px solid var(--white)
+}
+
+.gallery-info__login:focus {
+  transition: 0.5s ease-in-out;
+  outline   : 2px solid var(--darkmoderateviolet);
 }
 
 @media(max-width:1720px) {
@@ -427,10 +423,6 @@
 
   .gallery-modal-card-text {
     padding: 20px;
-  }
-
-  .gallery-swiper-slide:active:after {
-    margin: 10px
   }
 
   .gallery-right-swiper-container {
@@ -449,11 +441,41 @@
 }
 
 @media(max-width:1170px) {
+  .gallery-swiper-slide:active:after {
+    margin: 10px
+  }
+
+  .gallery-swiper-slide__picture:active:after {
+    background:
+      url(../img/gallery/plus.png) center/79px no-repeat,
+      url(../img/gallery/fon.png) center/250px no-repeat,
+      linear-gradient(0deg, rgba(var(--softviolet--rgb), 0.4), rgba(var(--softviolet--rgb), 0.4));
+  }
+
+  .gallery-swiper-slide__picture:active:after {
+    content : '';
+    position: absolute;
+    top     : 0;
+    right   : 0;
+    bottom  : 0;
+    left    : 0;
+    background:
+      url(../img/gallery/plus.png) center/79px no-repeat,
+      url(../img/gallery/fon.png) center/300px no-repeat,
+      linear-gradient(0deg, rgba(var(--softviolet--rgb), 0.4), rgba(var(--softviolet--rgb), 0.4));
+    border               : 2px solid var(--verysoftviolet);
+    background-attachment: scroll;
+    cursor               : pointer
+  }
+
+  .gallery-info__login:active {
+    transition: 0.5s ease-in-out;
+    outline   : 2px solid var(--white);
+  }
+
   .gallery-grid {
     padding: 19px 39px 2px 35px
   }
-
-
 
   .gallery-left__header {
     padding-top: 61px
@@ -502,6 +524,13 @@
 @media(max-width:976px) {
   .gallery {
     background-image: url(../img/gallery/birmingham-museums-trust-768.jpg)
+  }
+
+  .gallery-swiper-slide__picture:active:after {
+    background:
+      url(../img/gallery/plus.png) center/79px no-repeat,
+      url(../img/gallery/fon.png) center/250px 210px no-repeat,
+      linear-gradient(0deg, rgba(var(--softviolet--rgb), 0.4), rgba(var(--softviolet--rgb), 0.4));
   }
 
   .gallery-modal-card {
@@ -574,6 +603,13 @@
     display       : flex;
     flex-direction: column-reverse;
     padding-bottom: 237px
+  }
+
+  .gallery-swiper-slide__picture:active:after {
+    background:
+      url(../img/gallery/plus.png) center/79px no-repeat,
+      url(../img/gallery/fon.png) center/210px 320px no-repeat,
+      linear-gradient(0deg, rgba(var(--softviolet--rgb), 0.4), rgba(var(--softviolet--rgb), 0.4));
   }
 
   .gallery-modal-card {

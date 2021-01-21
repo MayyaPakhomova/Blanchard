@@ -95,28 +95,6 @@
   color      : var(--white)
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .check:hover+.tick {
-    border: 1px solid var(--softviolet)
-  }
-
-  .check:hover~.name {
-    color: var(--softviolet)
-  }
-}
-
-.name:focus {
-  outline: 2px solid var(--darkmoderateviolet)
-}
-
-.check:active+.tick {
-  border: 1px solid var(--darkmoderateviolet)
-}
-
-.check:active~.name {
-  color: var(--darkmoderateviolet)
-}
-
 .tick {
   position : relative;
   display  : inline-block;
@@ -261,22 +239,8 @@
   line-height     : 22px;
   border          : 2px solid var(--moderateviolet);
   color           : var(--white);
+  transition      : 0.5s ease-in-out;
   cursor          : pointer
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .editions-right-swipe-books-btn:hover {
-    background-color: var(--moderateviolet);
-    transition      : 0.5s ease-in-out;
-  }
-}
-
-.editions-right-swipe-books-btn:active {
-  border: 3px solid var(--verysoftviolet)
-}
-
-.editions-right-swipe-books-btn__text:focus {
-  outline: 2px solid var(--moderateviolet)
 }
 
 .editions-right-swiper-button__prev,
@@ -328,6 +292,34 @@
   bottom  : 49px
 }
 
+@media (hover:hover) and (pointer: fine) {
+  .editions-right-swipe-books-btn:hover {
+    background-color: var(--moderateviolet);
+    transition      : 0.5s ease-in-out;
+  }
+
+  .check:hover+.tick {
+    border: 1px solid var(--softviolet)
+  }
+
+  .check:hover~.name {
+    color: var(--softviolet)
+  }
+}
+
+.name:focus {
+  outline: 2px solid var(--darkmoderateviolet)
+}
+
+.editions-right-swipe-books-btn:focus {
+  background-color: transparent;
+}
+
+.editions-right-swipe-books-btn:focus .editions-right-swipe-books-btn__text {
+  outline   : 2px solid var(--moderateviolet);
+  transition: 0.5s ease-in-out;
+}
+
 @media(max-width:1700px) {
   .editions-right-swiper-container {
     width: 700px
@@ -350,6 +342,20 @@
 }
 
 @media(max-width:1024px) {
+  .editions-right-swipe-books-btn:active {
+    border          : 3px solid var(--verysoftviolet);
+    background-color: var(--moderateviolet);
+    transition      : 0.5s ease-in-out;
+  }
+
+  .check:active+.tick {
+    border: 1px solid var(--darkmoderateviolet)
+  }
+
+  .check:active~.name {
+    color: var(--darkmoderateviolet)
+  }
+
   .editions-name-five::after {
     content: '...'
   }

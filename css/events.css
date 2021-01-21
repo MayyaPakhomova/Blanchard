@@ -86,20 +86,6 @@
   color        : var(--moderateviolet)
 }
 
-.events-slide__link:focus {
-  outline: 2px solid var(--darkmoderateviolet)
-}
-
-.events-slide__link:hover {
-  font-weight: 700;
-  transition : 0.5s ease-in-out;
-}
-
-.events-slide__link:active {
-  font-weight: 700;
-  color      : var(--darkmoderateviolet)
-}
-
 .events-btn {
   display         : block;
   margin          : auto;
@@ -116,6 +102,7 @@
   background-color: transparent;
   border          : 2px solid var(--moderateviolet);
   color           : var(--moderateviolet);
+  transition      : 0.5s ease-in-out;
   cursor          : pointer
 }
 
@@ -123,7 +110,46 @@
   display: none
 }
 
+@media (hover:hover) and (pointer:fine) {
+  .events-slide__link:hover {
+    font-weight: 700;
+    transition : 0.5s ease-in-out;
+  }
+
+  .events-btn:hover {
+    background-color: var(--moderateviolet);
+    color           : var(--white);
+    border          : 2px solid var(--moderateviolet);
+    transition      : 0.5s ease-in-out;
+  }
+}
+
+.events-slide__link:focus {
+  outline: 2px solid var(--darkmoderateviolet)
+}
+
+.events-btn:focus {
+  background-color: var(--moderateviolet);
+  color           : var(--white);
+  font-size       : 20px;
+  transition      : 0.7s ease-in-out;
+}
+
 @media(max-width:1455px) {
+
+  .events-slide__link:active {
+    font-weight     : 700;
+    color           : var(--darkmoderateviolet);
+    background-color: transparent;
+  }
+
+  .events-btn:active {
+    background-color: var(--moderateviolet);
+    color           : var(--white);
+    transition      : 0.5s ease-in-out;
+  }
+
+
   .events-slide {
     min-height: 683px
   }
