@@ -81,7 +81,7 @@
   backface-visibility: hidden;
   opacity            : 0;
   transform          : scale(1.4);
-  animation          : rossfade 24s infinite
+  animation          : crossfade 24s infinite
 }
 
 #crossfade span:nth-child(3) {

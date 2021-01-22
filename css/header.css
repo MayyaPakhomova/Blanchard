@@ -48,8 +48,8 @@
   padding-left       : 20px;
   padding-right      : 4px;
   color              : var(--white);
-  background-color   : var(--black);
-  background-image   : url(../img/header/vector_header.png);
+  background-color   : transparent;
+  background-image   : url(../img/header/Vector.svg);
   background-repeat  : no-repeat;
   background-position: left;
   border             : none;
@@ -70,15 +70,16 @@
 }
 
 .header-menu-bottom__item {
-  display            : inline-block;
-  position           : relative;
-  margin             : 5px 92px 0 0;
-  font-weight        : normal;
-  font-size          : 18px;
-  color              : var(--white);
-  background-image   : url(../img/header/tick.png);
-  background-repeat  : no-repeat;
-  background-position: right
+  display              : inline-block;
+  position             : relative;
+  margin               : 5px 92px 0 0;
+  font-weight          : normal;
+  font-size            : 18px;
+  color                : var(--white);
+  background-image     : url(../img/header/tick.png);
+  background-repeat    : no-repeat;
+  background-position  : right;
+  background-position-y: 15px;
 }
 
 .header-menu-bottom-inner {
@@ -87,7 +88,7 @@
   height          : 298px;
   position        : absolute;
   left            : 0;
-  top             : 33px;
+  top             : 49px;
   padding         : 20px 0 0 0;
   background-color: rgba(var(--black--rgb), 0.6);
   z-index         : 5;
@@ -105,9 +106,9 @@
   line-height: 19px;
   width      : 220px;
   min-height : 40px;
-
-  padding: 5px 10px;
-  color  : var(--white)
+  outline    : transparent;
+  padding    : 5px 10px;
+  color      : var(--white)
 }
 
 .right-tick1 {
@@ -315,41 +316,40 @@
 @media (hover:hover) and (pointer:fine) {
   .header-menu-top-total-left__link:hover {
     color     : var(--softviolet);
-    transition: 0.4s ease-in-out;
+    transition: all 0.2s linear;
     outline   : transparent
   }
 
   .header-menu-top-btn:hover {
-
     color           : var(--softviolet);
     background-image: url(../img/header/vector-purple.png);
-    transition      : 0.4s ease-in-out;
-    outline         : transparent
+    transition      : all 0.2s linear;
+
   }
 
   .header-menu-bottom__item:hover {
-    color           : var(--softviolet);
-    outline         : transparent;
-    transition      : 0.4s ease-in-out;
-    background-image: url(../img/header/tick-purple.png)
+    outline              : transparent;
+    color                : var(--softviolet);
+    background-image     : url(../img/header/tick-purple.png);
+    background-position-y: 11px;
   }
 
   .header-menu-bottom-inner__link:hover {
-    transition: 0.4s ease-in-out;
+    transition: all 0.2s linear;
     outline   : 2px solid var(--moderateviolet);
   }
 
   .header-menu-searh:hover .header-menu-searh__input {
     caret-color  : var(--softviolet);
     border-bottom: 2px solid var(--softviolet);
-    transition   : 0.4s ease-in-out
+    transition   : all 0.2s linear;
   }
 
   .header-menu-searh:hover .header-menu-searh__btn {
     background-image: url(../img/header/search-activ.png);
     width           : 21px;
     height          : 21px;
-    transition      : 0.4s ease-in-out;
+    transition      : all 0.2s linear;
   }
 }
 
@@ -384,6 +384,19 @@
 .header-menu-searh:focus .header-menu-searh__btn {
   background-image : url(../img/header/search-1920.png);
   background-repeat: no-repeat
+}
+
+.header-menu-bottom__item:active {
+  color                : var(--darkmoderateviolet);
+  outline              : transparent;
+  outline              : transparent;
+  background-image     : url(../img/header/tick-active.png);
+  background-position-y: 15px;
+}
+
+.header-menu-bottom-inner__link:active {
+  background-color     : rgba(var(--softviolet--rgb), 0.4);
+  background-blend-mode: overlay, color
 }
 
 @media(max-width:1755px) {
@@ -464,19 +477,6 @@
   .header-menu-top-btn:active {
     outline: transparent;
     color  : var(--moderateviolet)
-  }
-
-  .header-menu-bottom__item:active {
-    color                : var(--darkmoderateviolet);
-    outline              : transparent;
-    outline              : transparent;
-    background-image     : url(../img/header/tick-active.png);
-    background-position-y: 15px
-  }
-
-  .header-menu-bottom-inner__link:active {
-    background-color     : rgba(var(--softviolet--rgb), 0.4);
-    background-blend-mode: overlay, color
   }
 
   .header-menu-searh:active .header-menu-searh__btn {
@@ -698,7 +698,6 @@
     outline              : transparent;
     background-position-x: 84px;
     background-position-y: 23px;
-    background-color     : transparent;
     border               : 2px solid var(--moderateviolet);
     box-sizing           : border-box;
     border-radius        : 100px;

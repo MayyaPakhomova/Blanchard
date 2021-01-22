@@ -21,8 +21,8 @@
   flex-direction: column;
   flex          : 0 0 29.3%;
   margin-right  : 50px;
-  margin-bottom : 49px;
   border        : 1px solid var(--lightgray);
+  outline       : transparent;
   flex-wrap     : wrap
 }
 
@@ -89,6 +89,7 @@
 .events-btn {
   display         : block;
   margin          : auto;
+  margin-top      : 50px;
   border          : none;
   outline         : none;
   min-width       : 188px;
@@ -189,9 +190,8 @@
   }
 
   .events-slide {
-    margin-bottom: 50px;
-    margin-right : 27px;
-    flex         : 0 0 30%
+    margin-right: 27px;
+    flex        : 0 0 30%
   }
 
   .events-slide__small-text {
@@ -256,12 +256,11 @@
 @media(max-width:768px) {
   .events-slide {
     border: 1px solid var(--lightgray);
-
+    flex  : 0 0 44.8%;
   }
 
-  .events-slide {
-    flex         : 0 0 44.8%;
-    margin-bottom: 51px
+  .events-btn {
+    margin-top: 51px
   }
 
   .events-slide__medium-text {
