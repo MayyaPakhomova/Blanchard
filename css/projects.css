@@ -78,18 +78,26 @@
   border-top  : 15px solid var(--lightgray)
 }
 
-.tooltip-three::before {
+.popur-three:before {
   left: 98px
 }
 
 .projects__link {
-  color      : var(--moderateviolet);
-  font-weight: 600
+  color              : var(--moderateviolet);
+  font-weight        : 600;
+  cursor             : pointer;
+  text-decoration    : none;
+  background-image   : linear-gradient(currentColor, currentColor);
+  background-repeat  : no-repeat;
+  background-position: 0% 100%;
+  background-size    : 0% 2px;
+  transition         : background-size .3s;
 }
+
 
 .projects-bottom {
   padding-left: 102px;
-  padding-top : 20px
+  padding-top : 22px
 }
 
 .projects-card-one {
@@ -239,7 +247,8 @@
   }
 
   .projects__link:hover {
-    border-bottom: 1px solid var(--moderateviolet)
+    color          : var(--moderateviolet);
+    background-size: 100% 2px;
   }
 }
 
@@ -694,7 +703,7 @@
   }
 
   .projects-top {
-    margin-top   : 14px;
+    margin-top   : 12px;
     padding-left : 5px;
     padding-right: 7px
   }

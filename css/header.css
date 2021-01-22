@@ -11,7 +11,7 @@
 }
 
 .header-menu-top-logo {
-  padding: 31px 112px 0 5px;
+  padding: 31px 10px 0 5px;
 }
 
 .header-menu-top {
@@ -21,13 +21,14 @@
 }
 
 .header-menu-top-total-left {
+  padding        : 34px 0 0 111px;
   display        : flex;
   justify-content: space-between
 }
 
 .header-menu-top-total-left__list {
-  padding: 34px 86px 0 7px;
-  display: flex
+  padding-right: 86px;
+  display      : flex
 }
 
 .header-menu-top-total-left__item {
@@ -44,7 +45,6 @@
 
 .header-menu-top-btn {
   margin-left        : 193px;
-  margin-top         : 33px;
   padding-left       : 20px;
   padding-right      : 4px;
   color              : var(--white);
@@ -53,7 +53,7 @@
   background-repeat  : no-repeat;
   background-position: left;
   border             : none;
-  outline            : 0;
+  outline            : transparent;
   font-size          : 18px;
   line-height        : 25px;
   cursor             : pointer;
@@ -63,7 +63,7 @@
   position       : relative;
   display        : flex;
   justify-content: space-between;
-  padding        : 29px 100px 13px 104px;
+  padding        : 29px 100px 13px 101px;
   align-items    : center;
   cursor         : pointer;
   z-index        : 5
@@ -72,8 +72,7 @@
 .header-menu-bottom__item {
   display            : inline-block;
   position           : relative;
-  margin-right       : 92px;
-  margin-top         : 5px;
+  margin             : 5px 92px 0 0;
   font-weight        : normal;
   font-size          : 18px;
   color              : var(--white);
@@ -113,23 +112,28 @@
 
 .right-tick1 {
   left : 3px;
-  width: 92px
+  width: 89px
 }
 
 .right-tick2 {
-  width: 159px
+  width: 160px;
+  left : 3px;
+  top  : 1px;
 }
 
 .right-tick3 {
-  width: 198px
+  width: 197px;
+  left : 5px;
 }
 
 .right-tick4 {
-  width: 99px
+  width: 99px;
+  left : 8px;
 }
 
 .right-tick5 {
-  width: 103px
+  width: 101px;
+  left : 8px;
 }
 
 .simplebar-track.simplebar-horizontal {
@@ -270,9 +274,10 @@
 }
 
 .header-menu-searh {
-  position  : relative;
-  width     : 260px;
-  margin-top: 14px
+  position      : relative;
+  width         : 260px;
+  margin-top    : 10px;
+  padding-bottom: 4px;
 }
 
 .header-menu-searh__btn {
@@ -287,6 +292,7 @@
   background-size  : 100%;
   border           : none;
   outline          : 0;
+  transition       : 0.4s ease-in-out;
   cursor           : pointer
 }
 
@@ -295,7 +301,6 @@
   width           : 218px;
   height          : 30px;
   border          : none;
-  outline         : none;
   background-color: transparent;
   outline         : 2px solid transparent;
   border-bottom   : 1px solid rgba(var(--white--rgb), 0.85);
@@ -303,49 +308,48 @@
   font-size       : 18px;
   line-height     : 25px;
   color           : var(--white);
+  transition      : 0.4s ease-in-out;
   cursor          : pointer
 }
 
 @media (hover:hover) and (pointer:fine) {
   .header-menu-top-total-left__link:hover {
-    color  : var(--softviolet);
-    outline: transparent
+    color     : var(--softviolet);
+    transition: 0.4s ease-in-out;
+    outline   : transparent
   }
 
   .header-menu-top-btn:hover {
+
     color           : var(--softviolet);
     background-image: url(../img/header/vector-purple.png);
+    transition      : 0.4s ease-in-out;
     outline         : transparent
   }
 
   .header-menu-bottom__item:hover {
     color           : var(--softviolet);
     outline         : transparent;
+    transition      : 0.4s ease-in-out;
     background-image: url(../img/header/tick-purple.png)
   }
 
   .header-menu-bottom-inner__link:hover {
-    outline: 2px solid var(--moderateviolet);
+    transition: 0.4s ease-in-out;
+    outline   : 2px solid var(--moderateviolet);
   }
 
   .header-menu-searh:hover .header-menu-searh__input {
     caret-color  : var(--softviolet);
-    border-bottom: 2px solid var(--softviolet)
+    border-bottom: 2px solid var(--softviolet);
+    transition   : 0.4s ease-in-out
   }
 
   .header-menu-searh:hover .header-menu-searh__btn {
-    background-image : url(../img/header/search-activ.png);
-    background-repeat: no-repeat
-  }
-
-  .header-menu-searh:hover .header-menu-searh__input {
-    caret-color  : transparent;
-    border-bottom: 1px solid rgba(var(--white--rgb), 0.85)
-  }
-
-  .header-menu-searh:hover .header-menu-searh__btn {
-    background-image : url(../img/header/search-1920.png);
-    background-repeat: no-repeat
+    background-image: url(../img/header/search-activ.png);
+    width           : 21px;
+    height          : 21px;
+    transition      : 0.4s ease-in-out;
   }
 }
 
@@ -358,7 +362,7 @@
 }
 
 .header-menu-top-btn:focus {
-  outline: 2px solid var(--darkmoderateviolet)
+  border: 2px solid var(--darkmoderateviolet)
 }
 
 .header-menu-bottom__item:focus {
@@ -383,16 +387,13 @@
 }
 
 @media(max-width:1755px) {
-  .header-menu-bottom__list>li {
-    margin-right: 45px
-  }
 
-  .header-menu-top-total-left__item {
-    margin-right: 40px
+  .header-menu-top-total-left {
+    padding: 34px 0px 25px 0px;
   }
 
   .header-menu-top-total-left__list {
-    margin-right: 30px
+    padding-right: 30px
   }
 
   .header-menu-top-btn {
@@ -408,8 +409,8 @@
     padding: 0
   }
 
-  .header-menu-bottom__list>li {
-    margin-right: 25px
+  .header-menu-bottom__item {
+    margin: 5px 30px 15px 0;
   }
 
   .header-menu-searh__input {
@@ -417,32 +418,43 @@
   }
 
   .header-menu-top-total-left__item {
+    margin-left : 15px;
     margin-right: 15px
   }
 
   .header-menu-searh {
     margin: 0
   }
+
+  .header-menu-searh {
+    width: 150px;
+  }
+
+  .header-menu-bottom {
+    justify-content: flex-start;
+  }
 }
 
 @media(max-width:1024px) {
   .header-menu-searh:active .header-menu-searh__btn {
-    background-image : url(../img/header/search-1920.png);
-    background-repeat: no-repeat
+    background-image: url(../img/header/search-1920.png);
+    transition      : 0.4s ease-in-out
   }
 
   .header-menu-searh:active .header-menu-searh__input {
+    transition : 0.4s ease-in-out;
     caret-color: transparent
   }
 
   .header-menu-searh:active .header-menu-searh__btn {
-    background-image : url(../img/header/search-1920.png);
-    background-repeat: no-repeat
+    transition      : 0.4s ease-in-out;
+    background-image: url(../img/header/search-1920.png);
   }
 
   .header-menu-searh:active .header-menu-searh__input {
-    opacity: 0;
-    margin : 0
+    opacity   : 0;
+    margin    : 0;
+    transition: 0.4s ease-in-out
   }
 
   .header-menu-top-total-left__link:active {
@@ -450,11 +462,13 @@
   }
 
   .header-menu-top-btn:active {
-    color: var(--moderateviolet)
+    outline: transparent;
+    color  : var(--moderateviolet)
   }
 
   .header-menu-bottom__item:active {
     color                : var(--darkmoderateviolet);
+    outline              : transparent;
     outline              : transparent;
     background-image     : url(../img/header/tick-active.png);
     background-position-y: 15px
@@ -472,6 +486,11 @@
 
   .header-menu-searh:active .header-menu-searh__input {
     caret-color: var(--softviolet)
+  }
+
+  .header-menu-searh {
+    padding: 0px;
+    width  : 289px;
   }
 
   .header-menu {
@@ -495,7 +514,8 @@
   .header-menu-burger {
     position        : relative;
     background-color: transparent;
-    margin-left     : 20px;
+    padding-right   : 100px;
+    margin-left     : 35px;
     bottom          : 3px;
     width           : 40px;
     height          : 35px;
@@ -536,21 +556,21 @@
 
   .header-menu-burger.open-menu span {
     opacity   : 0;
-    transition: 0.5s
+    transition: 0.4s ease-in-out
   }
 
   .header-menu-burger.open-menu:before {
     width     : 36px;
     transform : rotate(45deg);
     top       : 20px;
-    transition: 0.3s ease-in-out
+    transition: 0.4s ease-in-out
   }
 
   .header-menu-burger.open-menu:after {
     width     : 36px;
     transform : rotate(-45deg);
     top       : 20px;
-    transition: 0.3s ease-in-out
+    transition: 0.4s ease-in-out
   }
 
   .header-menu-bottom__list {
@@ -558,7 +578,8 @@
   }
 
   .header-menu-top-total.open-menu {
-    left: 0
+    left      : 0;
+    transition: 0.4s ease-in-out
   }
 
   .header-menu-searh__btn {
@@ -571,7 +592,7 @@
 
   .header-menu-searh__input {
     opacity: 0;
-    width  : 200px
+    width  : 2px
   }
 
   ::placeholder {
@@ -579,13 +600,15 @@
   }
 
   .header-menu-searh__btn--active {
-    background-image : url(../img/header/search-1920.png);
-    background-repeat: no-repeat;
-    margin-right     : 194px
+    background-image: url(../img/header/search-1920.png);
+    margin-right    : 229px;
+    margin-top      : 4px;
   }
 
   .header-menu-searh__input--active {
-    margin-bottom: 14px;
+    width        : 213px;
+    margin-bottom: 1px;
+    ;
     border-bottom: 1px solid rgba(var(--white--rgb), 0.85);
     caret-color  : transparent;
     opacity      : 1
@@ -603,9 +626,7 @@
   }
 
   .header-menu-top-logo {
-    margin-left   : 199px;
-    padding-bottom: 17px;
-    margin-top    : 30px;
+    padding: 29px 23px 17px 168px;
   }
 
   .header-menu-top-total {
@@ -649,6 +670,7 @@
   }
 
   .header-menu-top-total-left {
+    padding        : 0;
     margin-left    : 47px;
     margin-right   : 54px;
     flex-direction : column;
@@ -673,7 +695,7 @@
     min-height           : 60px;
     padding              : 1px 1px 1px 13px;
     border               : none;
-    outline              : 0;
+    outline              : transparent;
     background-position-x: 84px;
     background-position-y: 23px;
     background-color     : transparent;
@@ -735,8 +757,7 @@
 
 @media(max-width:788px) {
   .header-menu-top-logo {
-    margin-left : 0;
-    margin-right: 61px
+    padding: 30px 60px 17px 0px;
   }
 
   .header-menu-searh {
@@ -744,7 +765,8 @@
   }
 
   .header-menu-burger {
-    margin-left: 22px
+    padding    : 0;
+    margin-left: 20px;
   }
 
   .header-menu--active {
@@ -757,19 +779,22 @@
   }
 
   .header-menu-searh__btn {
-    margin-top: 4px
+    margin-top: 4px;
+    right     : 40px;
   }
 
   .header-menu-burger.open-menu:before {
-    width: 35px
+    width     : 35px;
+    transition: 0.4s ease-in-out
   }
 
   .header-menu-burger.open-menu:after {
-    width: 35px
+    width     : 35px;
+    transition: 0.4s ease-in-out
   }
 
   .header-menu-searh__close {
-    padding-right   : 36px;
+    padding-right   : 33px;
     border          : none;
     outline         : none;
     background-color: transparent;
@@ -784,33 +809,39 @@
     position  : absolute;
     width     : 35px;
     height    : 2px;
-    background: var(--white)
+    background: var(--white);
+    transition: 0.4s ease-in-out
   }
 
   .header-menu-searh__close:before {
-    transform: rotate(45deg)
+    transform : rotate(45deg);
+    transition: 0.4s ease-in-out
   }
 
   .header-menu-searh__close:after {
-    transform: rotate(-45deg)
+    transform : rotate(-45deg);
+    transition: 0.4s ease-in-out
   }
 
   .header-menu-searh__close--active {
-    display: block
+    display   : block;
+    transition: 0.4s ease-in-out
   }
 
   .header-menu-searh--active {
     display        : flex;
     justify-content: space-between;
     padding        : 32px 36px 33px 40px;
-    width          : 100%
+    width          : 100%;
+    transition     : 0.4s ease-in-out
   }
 
   .header-menu-searh__btn--active {
     background-image: url(../img/header/search-1920.png);
     right           : 0;
     left            : 42px;
-    top             : 38px
+    top             : 34px;
+    transition      : 0.4s ease-in-out
   }
 
   .header-menu-searh__input--active {
@@ -818,7 +849,8 @@
     border-bottom: 1px solid var(--white);
     caret-color  : var(--white);
     opacity      : 1;
-    margin       : 4px 6px 2px 39px
+    margin       : 4px 6px 2px 39px;
+    transition   : 0.4s ease-in-out
   }
 
   .header-menu-burger--active {
@@ -885,7 +917,7 @@
   }
 
   .header-menu-top-total-right__img {
-    width : 350px;
+    width : 300px;
     height: 100px
   }
 
@@ -895,7 +927,7 @@
 
   .header-menu-top-btn {
     width                : 180px;
-    height               : 60px;
+    min-height           : 60px;
     background-position-x: 48px
   }
 
@@ -1007,8 +1039,8 @@
 
   .header-menu-top-btn {
     margin-top           : 64px;
-    height               : 40px;
-    background-position-y: 13px
+    min-height           : 40px;
+    background-position-y: 22px;
   }
 
   .header-menu-top-total-left {
@@ -1062,11 +1094,12 @@
     background: linear-gradient(to bottom, var(--black) 40%, rgba(var(--black--rgb), 0.4) 100%)
   }
 
+  .header-menu-burger {
+    right: 3px;
+  }
+
   .header-menu-top-logo {
-    margin        : 0;
-    margin-top    : 12px;
-    margin-right  : 15px;
-    padding-bottom: 0px
+    padding: 12px 15px 0px 0px;
   }
 
   .header-menu-burger:before {
@@ -1075,12 +1108,12 @@
   }
 
   .header-menu-burger span {
-    width: 15.6px;
-    top  : 15px
+    width: 16px;
+    top  : 15px;
   }
 
   .header-menu-burger:after {
-    width: 13.3px;
+    width: 13px;
     top  : 22px
   }
 
@@ -1090,8 +1123,8 @@
   }
 
   .header-menu-searh__btn {
-    width: 14.5px;
-    right: 6px;
+    width: 15px;
+    right: 5px;
     top  : 6px;
   }
 

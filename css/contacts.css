@@ -18,7 +18,7 @@
 
 .contacts-form {
   width  : 36%;
-  padding: 203px 0 124px 149px;
+  padding: 203px 0 113px 149px;
   border : 1px solid var(--lightlightgray)
 }
 
@@ -46,7 +46,7 @@
 
 .contacts-form-header {
   font-weight: 400;
-  padding    : 13px 0 0 10px
+  padding    : 15px 0 0 10px;
 }
 
 .contacts-form__name,
@@ -99,7 +99,7 @@
 
 .contacts-feedback {
   display    : flex;
-  margin-top : 13px;
+  margin-top : 6px;
   margin-left: 10px
 }
 
@@ -112,7 +112,7 @@
 }
 
 .contacts-feedback__telegram {
-  margin-left: 17px;
+  margin-left: 21px;
 }
 
 @media (hover:hover) and (pointer:fine) {
@@ -156,7 +156,7 @@
   }
 
   .contacts {
-    margin-top: 81px
+    margin-top: 79px
   }
 
   .contact-header {
@@ -173,12 +173,13 @@
 
   .contacts-form {
     width  : 47.7%;
-    padding: 204px 0 124px 40px
+    padding: 204px 0 115px 40px;
   }
 
   .contacts-form__name,
   .contacts-form__tel {
-    width: 335px
+    padding-left: 2px;
+    width       : 335px
   }
 
   .contacts-address {
@@ -203,6 +204,10 @@
 }
 
 @media(max-width:1200px) {
+  .contacts-form-header {
+    padding: 14px 0 0 10px;
+  }
+
   .contacts-form-btn:active {
     font-size : 20px;
     color     : var(--white);
@@ -221,13 +226,21 @@
 }
 
 @media(max-width:815px) {
+  .contacts {
+    margin-top: 81px;
+  }
+
+  .contacts-form-header {
+    padding: 16px 0 0 10px;
+  }
+
   .contacts-map {
     width: 44%
   }
 
   .contacts-form {
     width  : 56%;
-    padding: 203px 0 124px 40px;
+    padding: 203px 0 114px 40px;
   }
 
   .contacts-container {
@@ -293,12 +306,17 @@
   }
 
   .contacts {
-    margin-top: 51px
+    margin-top: 53px
+  }
+
+  .contacts-form-btn {
+    margin-top: 21px;
   }
 
   .contacts-form__name,
   .contacts-form__tel {
-    width: 290px
+    margin-top: 18px;
+    width     : 290px
   }
 
   .contacts-address {
@@ -311,7 +329,7 @@
 
   .contacts-form {
     width  : 100%;
-    padding: 6px 0 41px 5px
+    padding: 6px 0 31px 5px;
   }
 
   .contacts-form__tel {
@@ -332,7 +350,7 @@
   }
 
   .contacts-feedback {
-    margin-top: 7px
+    margin-top: 0px
   }
 
 }

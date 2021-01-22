@@ -7,7 +7,7 @@
   padding-top   : 120px;
   padding-bottom: 121px;
   width         : 680px;
-  margin-left   : 101px;
+  margin-left   : 100px;
   margin-top    : 20px
 }
 
@@ -174,6 +174,14 @@
 
   .hero-crossfade__img-three {
     background-image: url(../img/hero/baner-3-768.jpg)
+  }
+
+  .hero-crossfade-info {
+    margin-left: 34px;
+  }
+
+  .hero-crossfade-info__btn {
+    margin-top: 133px;
   }
 }
 

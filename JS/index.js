@@ -429,10 +429,10 @@ document.querySelector('.editions-categories-header').addEventListener('click', 
   document.querySelector('.design').classList.toggle('design--active');
 });
 
-let left = document.querySelectorAll('.label');
+let left = document.querySelectorAll('.edition-elem');
 function f1() {
   for (let i = 0; i < left.length; i++) {
-    left[i].classList.toggle('label--active');
+    left[i].classList.toggle('edition-elem--active');
   }
 }
 document.querySelector('.editions-categories-header').onclick = f1;
@@ -594,5 +594,6 @@ function f2() {
   }
 }
 document.querySelector('.gallery-modal-card-close').onclick = f2;
+
 
 

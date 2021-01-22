@@ -1,5 +1,5 @@
 .catalog {
-  margin-top: 80px
+  margin-top: 82px
 }
 
 .catalog-header-tab {
@@ -13,8 +13,8 @@
 
 .catalog-header-tab__item {
   position         : relative;
-  width            : 46px;
-  height           : 46px;
+  width            : 48px;
+  height           : 48px;
   border-radius    : 100%;
   background-size  : cover;
   transition       : 0.2s ease-in-out;
@@ -24,16 +24,14 @@
 
 .catalog-header-tab__item::after {
   position     : absolute;
-  top          : 5px;
   content      : "";
   border       : 2px solid var(--darkmoderateviolet);
-  width        : 66px;
-  height       : 66px;
+  width        : 64px;
+  height       : 64px;
   border-radius: 100%;
   top          : -13px;
-  left         : -13px;
-  transition   : 0.5s ease-in-out;
-  position     : absolute;
+  left         : -12px;
+  transition   : 0.2s ease-in-out;
   opacity      : 0;
 }
 
@@ -45,16 +43,12 @@
 .catalog-header-tab {
   display    : flex;
   margin-top : 11px;
-  margin-left: 42px;
+  margin-left: 41px;
   cursor     : pointer
 }
 
 .catalog-header-tab__item:not(:first-child) {
-  margin-left: 50px
-}
-
-.catalog-header-tab__item:nth-child(4) {
-  margin-left: 40px;
+  margin-left: 48px
 }
 
 .france {
@@ -84,22 +78,17 @@
 }
 
 .accordion-tabs {
-  position: relative;
-  display : inline;
-  cursor  : pointer
+  position           : relative;
+  display            : inline;
+  cursor             : pointer;
+  text-decoration    : none;
+  background-image   : linear-gradient(currentColor, currentColor);
+  background-repeat  : no-repeat;
+  background-position: 0% 100%;
+  background-size    : 0% 2px;
+  transition         : background-size .3s;
 }
 
-.accordion-tabs::before {
-  content      : "";
-  display      : block;
-  border-bottom: 1px solid var(--darkmoderateviolet);
-  width        : 100%;
-  height       : 2px;
-  top          : 20px;
-  left         : 1px;
-  position     : absolute;
-  opacity      : 0;
-}
 
 .vekketta {
   display     : block;
@@ -107,36 +96,14 @@
 }
 
 
-.vekketta::before {
-  content      : "";
-  border-bottom: 1px solid var(--darkmoderateviolet);
-  width        : 44%;
-  height       : 2px;
-  top          : 20px;
-  left         : 1px;
-  position     : absolute;
-  opacity      : 0;
-}
-
 .giorgione {
   display    : block;
   break-after: column
 }
 
-.giorgione::before {
-  display      : block;
-  content      : "";
-  border-bottom: 1px solid var(--darkmoderateviolet);
-  width        : 52%;
-  height       : 2px;
-  top          : 20px;
-  left         : 1px;
-  position     : absolute;
-  opacity      : 0;
-}
-
 .catalog-text {
-  padding: 14px 632px 10px 104px
+  padding: 15px 632px 10px 104px;
+
 }
 
 .catalog-list {
@@ -173,7 +140,7 @@
 }
 
 .catalog-info__name {
-  margin-top : 20px;
+  margin-top : 21px;
   line-height: 33px
 }
 
@@ -195,7 +162,7 @@
 }
 
 .ui-accordion .ui-accordion-content {
-  padding: 25px 69px 29px 14px
+  padding: 26px 69px 29px 14px
 }
 
 .ui-accordion-header {
@@ -253,7 +220,7 @@
 .ui-icon {
   margin-left        : auto;
   right              : 2px;
-  top                : 2px;
+  top                : 6px;
   width              : 50px;
   height             : 50px;
   border-radius      : 100%;
@@ -283,18 +250,6 @@
 
 @media (hover:hover) and (pointer:fine) {
 
-  /* .vekketta:hover::before {
-    opacity: 1;
-  }
-
-  .giorgione:hover::before {
-    opacity: 1;
-  }
-
-  .accordion-tabs:hover:before {
-    opacity: 1;
-  } */
-
   .catalog-header-tab__item:hover {
     transition: 0.2s ease-in-out;
     box-shadow: 0 0 20px rgba(var(--moderateviolet--rgb), 0.7)
@@ -303,8 +258,16 @@
   .accordion-tabs:hover {
     color          : var(--darkmoderateviolet);
     font-weight    : 600;
-    text-decoration: underline;
+    background-size: 100% 2px;
     transition     : 0.2s ease-in-out;
+  }
+
+  .vekketta:hover {
+    background-size: 46% 2px;
+  }
+
+  .giorgione:hover {
+    background-size: 46% 2px;
   }
 
   .ui-accordion-header:hover {
@@ -422,25 +385,20 @@
   }
 
   .catalog-header-tab {
-    margin-top : 19px;
-    margin-left: 43px
+    margin-top : 17px;
+    margin-left: 42px;
   }
 
-  .catalog-header-tab__item.active {
-    margin-top: -10px;
-    border    : 2px solid var(--moderateviolet)
+  .catalog-header-tab__item::after {
+    top: -12px
   }
 
   .catalog-info__name {
     margin-top: 18px;
   }
 
-  .catalog-header-tab__item.active {
-    margin-top: -10px;
-  }
-
   .catalog-text {
-    padding: 7px 39px 14px 40px;
+    padding: 16px 39px 14px 40px;
   }
 
   .catalog-list {
@@ -452,21 +410,21 @@
   }
 
   .ui-accordion .ui-accordion-header {
-    padding: 0px 45px 45px 1px;
+    padding: 0px 45px 44px 1px;
   }
 
   .ui-accordion .ui-accordion-content {
     padding: 24px 21px 30px 15px
   }
 
-  .er {
-    padding: 20px;
+  .ui-icon {
+    top  : 40px;
+    right: 0;
+    left : 5px;
   }
 
-  .ui-icon {
-    top  : 36px;
-    right: 0;
-    left : 5px
+  .ui-state-active .ui-icon {
+    top: 33px;
   }
 
   .accordion-section {
@@ -475,7 +433,7 @@
 
 
   .accordion-section__seven {
-    padding-top: 35px;
+    padding-top: 38px;
   }
 
   .accordion-section__six {
@@ -488,7 +446,7 @@
   }
 
   .accordion-section__four {
-    padding-top: 35px;
+    padding-top: 38px;
   }
 
   .accordion-section__two {
@@ -506,12 +464,13 @@
 }
 
 @media(max-width:815px) {
-  /* .catalog-header-tab__item.active {
-    margin-left: 49px;
-  } */
 
-  .catalog-header-tab__item:nth-child(4) {
-    margin-left: 46px;
+  .catalog {
+    margin-top: 81px;
+  }
+
+  .catalog-header-tab__item:not(:first-child) {
+    margin-left: 52px;
   }
 
   .vekketta {
@@ -542,11 +501,11 @@
   }
 
   .catalog-header-tab {
-    margin-top: 12px
+    margin-top: 10px
   }
 
   .catalog-text {
-    padding: 13px 39px 13px 40px;
+    padding: 15px 39px 13px 40px;
   }
 
   .catalog-list {
@@ -589,10 +548,18 @@
   }
 
   .catalog-header-tab__item {
-    width          : 32px;
-    height         : 32px;
+    width          : 34px;
+    height         : 34px;
     background-size: contain
   }
+
+  .catalog-header-tab__item::after {
+    width : 41px;
+    height: 41px;
+    top   : -7px;
+    left  : -8px;
+  }
+
 }
 
 @media(max-width:500px) {
@@ -603,20 +570,20 @@
   }
 
   .accordion-section__one {
-    padding-top: 19px;
+    padding-top: 18px;
   }
 
   .accordion-section__two {
-    padding-top: 17px;
+    padding-top: 19px;
   }
 
   .accordion-section__three {
     margin-top: 0;
-    padding   : 17px 5px 2px 0
+    padding   : 18px 5px 2px 0
   }
 
   .accordion-section__four {
-    padding: 18px 5px 1px 0;
+    padding: 17px 5px 1px 0;
   }
 
 
@@ -631,22 +598,12 @@
   }
 
   .accordion-section__seven {
-    padding-top: 17px;
+    padding-top   : 17px;
+    padding-bottom: 1px;
   }
 
   .catalog-accordion {
     columns: auto
-  }
-
-  .catalog-header-tab__item.active {
-    margin-top            : -8px;
-    /* margin-left        : 40px; */
-    width                 : 46px;
-    height                : 46px;
-    background-position   : center;
-    background-repeat     : no-repeat;
-    background-size       : 32px;
-    border                : 2px solid var(--moderateviolet)
   }
 
   .catalog-info {
@@ -679,7 +636,7 @@
   }
 
   .ui-widget {
-    margin-top: 13px;
+    margin-top: 19px;
     font-size : 16px
   }
 
@@ -694,12 +651,12 @@
   }
 
   .catalog-header-tab__item:not(:first-child) {
-    margin-left: 29px
+    margin-left: 31px;
   }
 
   .catalog-header-tab {
-    margin-left: 3px;
-    margin-top : 13px
+    margin-left: 2px;
+    margin-top : 9px;
   }
 
   .catalog-header-title {
@@ -710,6 +667,10 @@
 
   .catalog-list {
     padding: 7px 0 11px 20px
+  }
+
+  .ui-state-active .ui-icon {
+    top: 23px;
   }
 }
 
@@ -726,23 +687,8 @@
     padding: 2px 45px 20px 4px
   }
 
-  .catalog-header-tab__item.active {
-    margin-top         : -7px;
-    width              : 44px;
-    height             : 44px;
-    background-size    : 32px;
-    background-position: center;
-    background-repeat  : no-repeat;
-    border             : 2px solid var(--moderateviolet)
-  }
-
   .catalog-list {
     padding: 0px 0 11px 0
-  }
-
-  .ui-icon {
-    background-size: 10px;
-    top            : 26px
   }
 
   .catalog-info__name {
@@ -760,6 +706,8 @@
   }
 
   .ui-icon {
-    left: 40px
+    left           : 40px;
+    background-size: 10px;
+    top            : 28px;
   }
 }
