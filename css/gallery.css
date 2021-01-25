@@ -1,40 +1,64 @@
 .gallery-right-modal {
-  position       : fixed;
-  left           : 0;
-  top            : 0;
-  right          : 0;
-  bottom         : 0;
-  display        : flex;
-  align-items    : center;
-  justify-content: center;
-  height         : 100vh;
-  width          : 100%;
-  opacity        : 0;
-  visibility     : hidden;
-  transition     : all 0.7s linear;
-  z-index        : 250;
+  --transition-time: 0.3s;
+  position         : fixed;
+  left             : 0;
+  top              : 0;
+  right            : 0;
+  bottom           : 0;
+  display          : flex;
+  align-items      : center;
+  justify-content  : center;
+  height           : 100vh;
+  width            : 100%;
+  overflow-y       : auto;
+  background-color : rgba(0, 0, 0, 0.7);
+  opacity          : 0;
+  visibility       : hidden;
+  transition       : opacity var(--transition-time), visibility var(--transition-time);
+  z-index          : 250;
+}
+
+.fadeInUp {
+  opacity   : 0;
+  transform : translateY(-100px);
+  transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+.fadeInUp.animate-open {
+  opacity   : 1;
+  transform : translateY(0);
+  transition: opacity var(--transition-time), transform var(--transition-time);
 }
 
 .gallery-modal-card {
-  position        : absolute;
+  position        : fixed;
   background-color: var(--white);
   width           : 900px;
   align-items     : center;
   justify-content : center;
-  opacity         : 0;
+  display         : none;
+
 }
 
-.gallery-right-modal--visible {
+.modal.is-open {
   opacity   : 1;
   visibility: visible;
-  transform : translateX(13%) translateY(10%);
 
 }
 
-.gallery-modal-card--visible {
-  opacity: 1;
+.gallery-modal-card.modal-open {
+  display: inline-block;
 }
 
+.disable-scroll {
+  position: relative;
+  overflow: hidden;
+  height  : 100vh;
+  position: fixed;
+  left    : 0;
+  top     : 0;
+  width   : 100%;
+}
 
 .gallery-modal-card-wrapper {
   display : flex;
@@ -43,10 +67,31 @@
 }
 
 .gallery-modal-card-close {
-  position : absolute;
-  color    : var(--gray60);
-  font-size: 24px;
-  right    : 10px;
+  position        : absolute;
+  right           : 10px;
+  top             : 0;
+  width           : 24px;
+  height          : 24px;
+  background      : none;
+  border          : none;
+  cursor          : pointer;
+  background-color: transparent;
+  outline         : none;
+}
+
+.gallery-modal-card-close::before,
+.gallery-modal-card-close::after {
+  content      : "";
+  display      : block;
+  position     : absolute;
+  left         : 0;
+  right        : 10px;
+  border-bottom: 2px solid var(--black);
+  transform    : rotate(45deg);
+}
+
+.gallery-modal-card-close::after {
+  transform: rotate(-45deg);
 }
 
 .gallery-modal-card-img {
@@ -328,6 +373,7 @@
 
 .gallery-swiper-slide {
   height             : 350px;
+  outline            : 2px solid transparent;
   background-position: center
 }
 
@@ -393,6 +439,10 @@
     transition : 0.5s ease-in-out;
     font-weight: 700;
   }
+}
+
+.gallery-swiper-slide:focus {
+  outline: 2px solid var(--darkmoderateviolet)
 }
 
 .gallery-right-swiper-button__next:focus {

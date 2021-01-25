@@ -28,10 +28,12 @@
 }
 
 .hero-crossfade-info__btn {
+  display      : block;
   margin-top   : 91px;
   margin-left  : 5px;
   padding      : 1px;
-  min-width    : 314px;
+  padding      : 21px;
+  width        : 314px;
   min-height   : 70px;
   border       : 3px solid transparent;
   outline      : transparent;
@@ -155,7 +157,7 @@
   }
 
   .hero-crossfade-info__btn {
-    margin-top: 134px;
+    margin-top: 132px;
   }
 }
 
@@ -178,6 +180,7 @@
 
   .hero-crossfade-info {
     margin-left: 34px;
+    padding-top: 162px;
   }
 
   .hero-crossfade-info__btn {
@@ -203,10 +206,10 @@
   }
 
   .hero-crossfade-info__btn {
-    display    : block;
-    margin     : auto;
+    margin: auto;
+
     margin-top : 87px;
-    min-width  : 250px;
+    width      : 250px;
     font-size  : 16px;
     line-height: 16px
   }
@@ -246,9 +249,10 @@
   }
 
   .hero-crossfade-info__btn {
+    padding   : 9px;
     margin-top: 40px;
     font-size : 12px;
-    min-width : 200px;
+    width     : 200px;
     min-height: 40px
   }
 

@@ -42,11 +42,11 @@ html {
 }
 
 body {
-  scroll-behavior: smooth;
-  font-size      : 16px;
-  font-weight    : 400;
-  line-height    : 32px;
-  color          : var(--gray20)
+  min-width  : 320px;
+  font-size  : 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color      : var(--gray20)
 }
 
 * {

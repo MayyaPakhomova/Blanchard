@@ -9,6 +9,7 @@
 }
 
 .footer-logo-img {
+  outline   : transparent;
   margin-top: 4px;
 }
 

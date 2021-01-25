@@ -256,6 +256,10 @@
   cursor          : pointer
 }
 
+.editions-right-swipe-books-btn__text {
+  outline: 2px solid transparent;
+}
+
 .editions-right-swiper-button__prev,
 .editions-right-swiper-button__next {
   margin-bottom      : 30px;
@@ -757,6 +761,7 @@
   }
 
   .editions-right-swiper-slide {
+    outline     : transparent;
     margin-right: 0;
     margin-top  : 20px
   }
@@ -824,7 +829,7 @@
   .editions-categories-left-elem,
   .editions-categories-right-elem,
   .editions-categories-centr-elem {
-    width      : 290px;
+    width      : 270px;
     margin-left: 29px;
   }
 

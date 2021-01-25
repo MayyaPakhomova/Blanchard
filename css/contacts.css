@@ -66,10 +66,7 @@
   margin-top: 24px
 }
 
-.contacts-form__name::placeholder {
-  color: var(--gray60)
-}
-
+.contacts-form__name::placeholder,
 .contacts-form__tel::placeholder {
   color: var(--gray60)
 }
@@ -91,6 +88,9 @@
   cursor          : pointer;
 }
 
+.contacts-form-btn__text {
+  outline: 2px solid transparent;
+}
 
 .contacts-feedback-header {
   font-weight: 400;
@@ -135,8 +135,12 @@
 }
 
 .contacts-form-btn:focus {
-  outline   : none;
-  border    : 2px solid var(--darkmoderateviolet);
+  outline   : transparent;
+  transition: 0.5s ease-in-out;
+}
+
+.contacts-form-btn:focus .contacts-form-btn__text {
+  outline   : 2px solid var(--moderateviolet);
   transition: 0.5s ease-in-out;
 }
 
@@ -178,7 +182,7 @@
 
   .contacts-form__name,
   .contacts-form__tel {
-    padding-left: 2px;
+    padding-left: 20px;
     width       : 335px
   }
 
@@ -188,14 +192,6 @@
 
   .contacts-form__tel {
     margin-top: 23px
-  }
-
-  .contacts-form__name::placeholder {
-    padding-left: 20px
-  }
-
-  .contacts-form__tel::placeholder {
-    padding-left: 20px
   }
 
   .contacts-form-btn {

@@ -78,6 +78,10 @@
   border-top  : 15px solid var(--lightgray)
 }
 
+.projects-tooltip__popur--active {
+  opacity: 1
+}
+
 .popur-three:before {
   left: 98px
 }
@@ -190,6 +194,11 @@
   transition: 0.7s linear;
 }
 
+.projects-bottom-slide__card--active {
+  filter    : grayscale(0) opacity(1);
+  transition: 0.7s linear;
+}
+
 .projects-bottom-container {
   margin-top: 23px;
   width     : 1450px;
@@ -269,7 +278,8 @@
 }
 
 .projects-bottom-slide__card:focus {
-  filter: grayscale(0) opacity(1);
+  outline: transparent;
+  filter : grayscale(0) opacity(1);
 }
 
 @media(max-width:1400px) {
@@ -404,9 +414,14 @@
     width : 195px;
     height: 53px;
   }
+
 }
 
 @media(max-width:1100px) {
+  .projects-tooltip__marker:active+.projects-tooltip__popur {
+    opacity: 1
+  }
+
   .projects__link:active {
     color        : var(--darkmoderateviolet);
     border-bottom: 1px solid var(--darkmoderateviolet)

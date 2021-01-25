@@ -1,6 +1,7 @@
 .header {
   position  : relative;
   background: linear-gradient(to bottom, var(--black) 60%, rgba(var(--black--rgb), 0.4) 40%);
+  transition: all 0.7s linear;
   z-index   : 5
 }
 
@@ -49,10 +50,10 @@
   padding-right      : 4px;
   color              : var(--white);
   background-color   : transparent;
-  background-image   : url(../img/header/Vector.svg);
+  background-image   : url(../img/header/Vector_header.png);
   background-repeat  : no-repeat;
   background-position: left;
-  border             : none;
+  border             : 2px solid transparent;
   outline            : transparent;
   font-size          : 18px;
   line-height        : 25px;
@@ -91,11 +92,12 @@
   top             : 49px;
   padding         : 20px 0 0 0;
   background-color: rgba(var(--black--rgb), 0.6);
+  transform       : translateX(-7px) translateY(5px);
   z-index         : 5;
 }
 
 .open {
-  display: block;
+  display: block
 }
 
 .header-menu-bottom-inner__link {
@@ -181,7 +183,7 @@
 
 .fridrix {
   margin          : 0 40px 20px 40px;
-  background-image: url(../img/header/fridrix-1920.jpg)
+  background-image: url(../img/header/Fridrix.jpg)
 }
 
 .leonardo {
@@ -191,7 +193,7 @@
 
 .verrocchio {
   margin          : 0 40px 40px 40px;
-  background-image: url(../img/header/verrocchio-1920.jpg)
+  background-image: url(../img/header/Verrocchio.jpg)
 }
 
 .mone {
@@ -322,7 +324,7 @@
 
   .header-menu-top-btn:hover {
     color           : var(--softviolet);
-    background-image: url(../img/header/vector-purple.png);
+    background-image: url(../img/header/Vector_purple.png);
     transition      : all 0.2s linear;
 
   }
@@ -346,7 +348,7 @@
   }
 
   .header-menu-searh:hover .header-menu-searh__btn {
-    background-image: url(../img/header/search-activ.png);
+    background-image: url(../img/header/Search_activ.png);
     width           : 21px;
     height          : 21px;
     transition      : all 0.2s linear;
@@ -603,12 +605,13 @@
     background-image: url(../img/header/search-1920.png);
     margin-right    : 229px;
     margin-top      : 4px;
+    transition      : all 0.4s linear;
   }
 
   .header-menu-searh__input--active {
     width        : 213px;
     margin-bottom: 1px;
-    ;
+    transition   : all 0.4s linear;
     border-bottom: 1px solid rgba(var(--white--rgb), 0.85);
     caret-color  : transparent;
     opacity      : 1
@@ -706,6 +709,7 @@
 
   .header-menu-top-total-right {
     display     : block;
+    height      : 100vh;
     margin-top  : 49px;
     margin-left : 4px;
     margin-right: 12px;
@@ -1039,7 +1043,7 @@
   .header-menu-top-btn {
     margin-top           : 64px;
     min-height           : 40px;
-    background-position-y: 22px;
+    background-position-y: 13px;
   }
 
   .header-menu-top-total-left {
@@ -1090,7 +1094,8 @@
 
 @media(max-width:330px) {
   .header--active {
-    background: linear-gradient(to bottom, var(--black) 40%, rgba(var(--black--rgb), 0.4) 100%)
+    background: linear-gradient(to bottom, var(--black) 40%, rgba(var(--black--rgb), 0.4) 100%);
+    transition: all 0.5s linear;
   }
 
   .header-menu-burger {
