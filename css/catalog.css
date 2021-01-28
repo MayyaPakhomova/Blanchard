@@ -17,6 +17,7 @@
   height           : 48px;
   border-radius    : 100%;
   background-size  : cover;
+  outline          : none;
   transition       : 0.2s ease-in-out;
   border           : 2px solid transparent;
   background-repeat: no-repeat
@@ -162,7 +163,7 @@
 }
 
 .ui-accordion .ui-accordion-content {
-  padding: 26px 69px 29px 14px
+  padding: 24px 69px 29px 14px
 }
 
 .ui-accordion-header {
@@ -214,6 +215,7 @@
 }
 
 .accordion-section__seven {
+
   padding-top: 5px;
 }
 
@@ -247,6 +249,35 @@
   border       : 0;
   border-bottom: 1px solid var(--moderateviolet)
 }
+
+.accordion-section-item {
+  position: relative;
+}
+
+.accordion-section-item::before {
+  content   : "";
+  position  : absolute;
+  left      : -3px;
+  top       : 4px;
+  width     : 213px;
+  height    : 34px;
+  border    : 2px solid var(--darkmoderateviolet);
+  transition: 0.2s ease-in-out;
+  opacity   : 0;
+}
+
+.accordion-section__seven::before {
+  content   : "";
+  position  : absolute;
+  left      : -3px;
+  top       : 4px;
+  width     : 106px;
+  height    : 34px;
+  border    : 2px solid var(--darkmoderateviolet);
+  transition: 0.2s ease-in-out;
+  opacity   : 0;
+}
+
 
 @media (hover:hover) and (pointer:fine) {
 
@@ -300,8 +331,12 @@
   outline: 1px solid var(--darkmoderateviolet)
 }
 
-.accordion-section:focus .accordion-section-item {
-  outline: 2px solid var(--darkmoderateviolet)
+.accordion-section:focus .accordion-section-item::before {
+  opacity: 1;
+}
+
+.accordion-section:focus .accordion-section__seven::before {
+  opacity: 1;
 }
 
 .ui-state-focus .ui-icon,
@@ -360,6 +395,16 @@
   .giorgione,
   .vekketta {
     display: inline
+  }
+
+  .accordion-section-item::before {
+    top : 35px;
+    left: -1px;
+  }
+
+  .accordion-section__seven::before {
+    top : 35px;
+    left: -1px;
   }
 
   .accordion-section__one {
@@ -560,6 +605,10 @@
     left  : -8px;
   }
 
+  .catalog-header-tab__item:focus {
+    width : 33px;
+    height: 33px;
+  }
 }
 
 @media(max-width:500px) {
@@ -567,6 +616,20 @@
     font-size  : 18px;
     line-height: 32px;
 
+  }
+
+  .accordion-section-item::before {
+    top   : 20px;
+    left  : -1px;
+    height: 26px;
+    width : 155px;
+  }
+
+  .accordion-section__seven::before {
+    top   : 17px;
+    left  : -1px;
+    height: 29px;
+    width : 77px;
   }
 
   .accordion-section__one {

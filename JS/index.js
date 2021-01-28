@@ -275,6 +275,7 @@ function onTabsClick(item) {
     }
   });
 }
+
 document.querySelector('.girlan').click();
 
 
@@ -716,3 +717,4 @@ class Modal {
 }
 
 const modal = new Modal();
+
