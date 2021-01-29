@@ -272,6 +272,12 @@ function onTabsClick(item) {
 
       currentBtn.classList.add('active');
       currentTab.classList.add('active');
+      if (window.matchMedia("(max-width:815px)").matches) {
+        currentTab.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
     }
   });
 }
