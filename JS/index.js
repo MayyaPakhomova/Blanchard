@@ -345,7 +345,6 @@ function mobileSlider() {
       spaceBetween: 15,
       slideClass: 'events-slide',
       wrapperClass: 'events-wrapper',
-      // bulletClass: 'events-bullet',
       pagination: {
         el: '.event-pagination',
       }
@@ -521,29 +520,17 @@ ymaps.ready(function () {
   }),
     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
       hintContent: '',
-
     }, {
-      // Опции.
-      // Необходимо указать данный тип макета.
       iconLayout: 'default#image',
-      // Своё изображение иконки метки.
       iconImageHref: 'img/footer7/ring.png',
     })
-
   myPlacemarkWithContent = new ymaps.Placemark([55.75846306898368, 37.601079499999905], {
     hintContent: '',
   }, {
-    // Опции.
-    // Необходимо указать данный тип макета.
     iconLayout: 'default#imageWithContent',
-    // Своё изображение иконки метки.
     iconImageHref: 'img/contacts/ring.png',
-    // Размеры метки.
     iconImageSize: [20, 20],
-
   });
-
-
   var zoomControl = new ymaps.control.ZoomControl({
     options: {
       position: { right: 0, top: 100 },

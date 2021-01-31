@@ -13,7 +13,7 @@ $mail->isSMTP();
 $mail->Host = 'smtp.mail.ru';  																						
 $mail->SMTPAuth = true;                              
 $mail->Username = '120587@internet.ru'; 
-$mail->Password = 'PyYEpY%1tot3'; 
+$mail->Password = 'uaYP*ofIPt45'; 
 $mail->SMTPSecure = 'ssl';                            
 $mail->Port = 465; 
 $mail->setFrom('120587@internet.ru');
@@ -22,7 +22,7 @@ $mail->addAddress('2288986@gmail.com');
 $mail->isHTML(true);                                  
 
 $mail->Subject = 'Заявка с тестового сайта';
-$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. '<br>Почта этого пользователя: ' .$email;
+$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone;
 $mail->AltBody = '';
 
 if(!$mail->send()) {

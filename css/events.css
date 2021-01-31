@@ -83,6 +83,7 @@
   margin-left  : 50px;
   line-height  : 23px;
   border-bottom: 1px solid var(--moderateviolet);
+  transition   : all 0.5s linear;
   color        : var(--moderateviolet)
 }
 
@@ -114,7 +115,7 @@
 @media (hover:hover) and (pointer:fine) {
   .events-slide__link:hover {
     font-weight: 700;
-    transition : 0.5s ease-in-out;
+    transition : all 0.3s linear;
   }
 
   .events-btn:hover {
