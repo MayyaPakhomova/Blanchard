@@ -80,7 +80,7 @@
 
 .accordion-tabs {
   position           : relative;
-  display            : inline;
+  display            : inline-block;
   cursor             : pointer;
   text-decoration    : none;
   background-image   : linear-gradient(currentColor, currentColor);
@@ -92,14 +92,8 @@
 
 
 .vekketta {
-  display     : block;
-  break-before: column
-}
+  display: block;
 
-
-.giorgione {
-  display    : block;
-  break-after: column
 }
 
 .catalog-text {
@@ -297,10 +291,6 @@
     background-size: 46% 2px;
   }
 
-  .giorgione:hover {
-    background-size: 46% 2px;
-  }
-
   .ui-accordion-header:hover {
     color     : var(--moderateviolet);
     transition: 0.2s ease-in-out;
@@ -391,12 +381,6 @@
 }
 
 @media(max-width:1024px) {
-
-  .giorgione,
-  .vekketta {
-    display: inline
-  }
-
   .accordion-section-item::before {
     top : 35px;
     left: -1px;
@@ -409,11 +393,6 @@
 
   .accordion-section__one {
     padding-top: 37px;
-  }
-
-  .girlan {
-    display    : block;
-    break-after: column
   }
 
   .catalog-accordion {
@@ -516,20 +495,6 @@
 
   .catalog-header-tab__item:not(:first-child) {
     margin-left: 52px;
-  }
-
-  .vekketta {
-    display     : block;
-    break-before: column
-  }
-
-  .giorgione {
-    display    : block;
-    break-after: column
-  }
-
-  .girlan {
-    display: inline
   }
 
   .catalog-tabs-body {

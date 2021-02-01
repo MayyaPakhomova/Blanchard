@@ -422,15 +422,15 @@ function mobileSliders() {
 }
 
 mobileSliders()
-
 window.addEventListener('resize', () => {
   mobileSliders();
 });
 
-document.querySelector('.editions-categories-header').addEventListener('click', function () {
-  document.querySelector('.editions-categories-header').classList.toggle('editions-categories-header--active');
+let editionsCategoriesHeader = document.querySelector('.editions-categories-header');
+editionsCategoriesHeader.addEventListener('click', function () {
+  editionsCategoriesHeader.classList.toggle('editions-categories-header--active');
 });
-document.querySelector('.editions-categories-header').addEventListener('click', function () {
+editionsCategoriesHeader.addEventListener('click', function () {
   document.querySelector('.design').classList.toggle('design--active');
 });
 
@@ -440,7 +440,7 @@ function f1() {
     left[i].classList.toggle('edition-elem--active');
   }
 }
-document.querySelector('.editions-categories-header').onclick = f1;
+editionsCategoriesHeader.onclick = f1;
 
 
 // инпут 25 000
