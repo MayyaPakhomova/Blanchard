@@ -36,6 +36,29 @@
 
 })();
 
+// фокус
+let focus = document.querySelectorAll('.focus');
+for (let i = 0; i < focus.length; i++)
+  focus[i].addEventListener('click', function () {
+    focus[i].blur();
+  });
+
+
+
+// плавный скрол
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+  smoothLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    const id = smoothLink.getAttribute('href');
+
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+};
+
 
 // Селект
 const mySelekt = () => {
@@ -62,41 +85,43 @@ new SimpleBar(document.querySelector('.header-menu-top-total-right__list'), { au
 
 
 // Поиск
-document.querySelector('.header-menu-searh').addEventListener('click', function (elem) {
+let headerMenuSearh = document.querySelector('.header-menu-searh');
+
+headerMenuSearh.addEventListener('click', function (elem) {
   elem.preventDefault();
   document.querySelector('.header-menu-top-logo').classList.toggle('header-menu-top-logo--active');
 
 });
-document.querySelector('.header-menu-searh').addEventListener('click', function (elem) {
+headerMenuSearh.addEventListener('click', function (elem) {
   elem.preventDefault();
   document.querySelector('.header-menu-burger').classList.toggle('header-menu-burger--active');
 
 });
-document.querySelector('.header-menu-searh').addEventListener('click', function (elem) {
+headerMenuSearh.addEventListener('click', function (elem) {
   elem.preventDefault();
   document.querySelector('.header-menu-searh__input').classList.toggle('header-menu-searh__input--active');
 
 });
-document.querySelector('.header-menu-searh').addEventListener('click', function (elem) {
+headerMenuSearh.addEventListener('click', function (elem) {
   elem.preventDefault();
   document.querySelector('.header-menu-searh__btn').classList.toggle('header-menu-searh__btn--active');
 
 });
-document.querySelector('.header-menu-searh').addEventListener('click', function (elem) {
+headerMenuSearh.addEventListener('click', function (elem) {
   elem.preventDefault();
-  document.querySelector('.header-menu-searh').classList.toggle('header-menu-searh--active');
+  headerMenuSearh.classList.toggle('header-menu-searh--active');
 
 });
-document.querySelector('.header-menu-searh').addEventListener('click', function (elem) {
+headerMenuSearh.addEventListener('click', function (elem) {
   elem.preventDefault();
   document.querySelector('.header-menu-searh__close').classList.toggle('header-menu-searh__close--active');
 
 });
-document.querySelector('.header-menu-searh').addEventListener('click', function (elem) {
+headerMenuSearh.addEventListener('click', function (elem) {
   elem.preventDefault();
   document.querySelector('.header-menu').classList.toggle('header-menu--active');
 });
-document.querySelector('.header-menu-searh').addEventListener('click', function (elem) {
+headerMenuSearh.addEventListener('click', function (elem) {
   elem.preventDefault();
   document.querySelector('.header').classList.toggle('header--active');
 });
@@ -169,22 +194,6 @@ let galSwiper = new Swiper('.gallery-right-swiper-container', {
     }
   },
 });
-
-
-// плавный скрол
-const smoothLinks = document.querySelectorAll('a[href^="#"]');
-for (let smoothLink of smoothLinks) {
-  smoothLink.addEventListener('click', function (e) {
-    e.preventDefault();
-    const id = smoothLink.getAttribute('href');
-
-    document.querySelector(id).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  });
-};
-
 
 // Каталог
 // аккордеон
@@ -302,37 +311,26 @@ document.querySelector('.belgium').addEventListener('click', function () {
 });
 
 
+// кнопка события
 
-let focus = document.querySelectorAll('.focus');
-for (let i = 0; i < focus.length; i++)
-  focus[i].addEventListener('click', function () {
-    focus[i].blur();
+if (window.matchMedia("(max-width:920px)").matches) {
+  document.querySelector('.events-slide-three').classList.add('events-slide-hidden')
+}
+
+let eventsBtn = document.querySelector('.events-btn')
+let slideHidden = document.querySelectorAll('.events-slide-hidden');
+
+
+eventsBtn.addEventListener('click', function () {
+  eventsBtn.classList.toggle('events-btn--active');
+
+});
+
+for (let i = 0; i < slideHidden.length; i++)
+  eventsBtn.addEventListener('click', function () {
+    slideHidden[i].classList.toggle('events-slide--active')
   });
 
-// кнопка события
-document.querySelector('.events-btn').addEventListener('click', function () {
-  document.querySelector('.events-btn').classList.toggle('events-btn--active');
-
-});
-
-document.querySelector('.events-btn').addEventListener('click', function () {
-  document.querySelector('.slide-four').classList.toggle('slide-four--active');
-
-});
-
-document.querySelector('.events-btn').addEventListener('click', function () {
-  document.querySelector('.slide-five').classList.toggle('slide-five--active');
-
-});
-
-document.querySelector('.events-btn').addEventListener('click', function () {
-  document.querySelector('.slide-six').classList.toggle('slide-six--active');
-
-});
-document.querySelector('.events-btn').addEventListener('click', function () {
-  document.querySelector('.slide-three').classList.toggle('slide-three--active');
-
-});
 
 // слайдер события 
 const slider = document.querySelector('.events-container');
