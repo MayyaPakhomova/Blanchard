@@ -230,7 +230,7 @@ $(function () {
 
 
 // табы
-const tabsBtn = document.querySelectorAll(".catalog-header-tab__item");
+const tabsBtn = document.querySelectorAll(".catalog-header-tab__item-btn");
 const tabsItems = document.querySelectorAll(".catalog-item");
 
 tabsBtn.forEach(onTabClick);

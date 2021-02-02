@@ -2,39 +2,39 @@
   font-family: 'opensans';
   font-style : normal;
   font-weight: 300;
-  src        : url(/fonds/OpenSans-Light.woff);
-  src        : url(/fonds/OpenSans-Light.woff2)
+  src        : url(../fonds/OpenSans-Light.woff);
+  src        : url(../fonds/OpenSans-Light.woff2)
 }
 
 @font-face {
   font-family: 'opensans';
   font-style : normal;
   font-weight: 400;
-  src        : url(/fonds/OpenSans-Regular.woff);
-  src        : url(/fonds/OpenSans-Regular.woff2)
+  src        : url(../fonds/OpenSans-Regular.woff);
+  src        : url(../fonds/OpenSans-Regular.woff2)
 }
 
 @font-face {
   font-family: 'opensans';
   font-style : normal;
   font-weight: 600;
-  src        : url(/fonds/OpenSans-SemiBold.woff);
-  src        : url(/fonds/OpenSans-SemiBold.woff2)
+  src        : url(../fonds/OpenSans-SemiBold.woff);
+  src        : url(../fonds/OpenSans-SemiBold.woff2)
 }
 
 @font-face {
   font-family: 'opensans';
   font-style : normal;
   font-weight: 700;
-  src        : url(/fonds/OpenSans-Bold.woff);
-  src        : url(/fonds/OpenSans-Bold.woff2)
+  src        : url(../fonds/OpenSans-Bold.woff);
+  src        : url(../fonds/OpenSans-Bold.woff2)
 }
 
 @font-face {
   font-family: 'opensans';
   font-style : italic;
-  src        : url(/fonds/OpenSans-Italic.woff);
-  src        : url(/fonds/OpenSans-Italic.woff2)
+  src        : url(../fonds/OpenSans-Italic.woff);
+  src        : url(../fonds/OpenSans-Italic.woff2)
 }
 
 

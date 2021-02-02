@@ -11,7 +11,8 @@
   padding-left: 103px
 }
 
-.catalog-header-tab__item {
+.catalog-header-tab__item-btn {
+  display          : initial;
   position         : relative;
   width            : 48px;
   height           : 48px;
@@ -23,7 +24,7 @@
   background-repeat: no-repeat
 }
 
-.catalog-header-tab__item::after {
+.catalog-header-tab__item-btn::after {
   position     : absolute;
   content      : "";
   border       : 2px solid var(--darkmoderateviolet);
@@ -36,16 +37,15 @@
   opacity      : 0;
 }
 
-.catalog-header-tab__item.active::after {
+.catalog-header-tab__item-btn.active::after {
   opacity   : 1;
   transition: 0.5s ease-in-out;
 }
 
 .catalog-header-tab {
   display    : flex;
-  margin-top : 11px;
-  margin-left: 41px;
-  cursor     : pointer
+  margin-top : 9px;
+  margin-left: 41px
 }
 
 .catalog-header-tab__item:not(:first-child) {
@@ -90,15 +90,12 @@
   transition         : background-size .3s;
 }
 
-
 .vekketta {
   display: block;
-
 }
 
 .catalog-text {
   padding: 15px 632px 10px 104px;
-
 }
 
 .catalog-list {
@@ -158,7 +155,8 @@
 
 .ui-accordion-header {
   background-color: transparent;
-  border          : none;
+  outline         : transparent;
+  border          : 2px solid transparent;
   border-bottom   : 1px solid var(--lightgray)
 }
 
@@ -244,34 +242,9 @@
   position: relative;
 }
 
-.accordion-section-item::before {
-  content   : "";
-  position  : absolute;
-  left      : -3px;
-  top       : 4px;
-  width     : 213px;
-  height    : 34px;
-  border    : 2px solid var(--darkmoderateviolet);
-  transition: 0.2s ease-in-out;
-  opacity   : 0;
-}
-
-.accordion-section__seven::before {
-  content   : "";
-  position  : absolute;
-  left      : -3px;
-  top       : 4px;
-  width     : 106px;
-  height    : 34px;
-  border    : 2px solid var(--darkmoderateviolet);
-  transition: 0.2s ease-in-out;
-  opacity   : 0;
-}
-
-
 @media (hover:hover) and (pointer:fine) {
 
-  .catalog-header-tab__item:hover {
+  .catalog-header-tab__item-btn:hover {
     transition: 0.2s ease-in-out;
     box-shadow: 0 0 20px rgba(var(--moderateviolet--rgb), 0.7)
   }
@@ -292,7 +265,7 @@
     transition: 0.2s ease-in-out;
   }
 
-  .catalog-header-tab__item:hover {
+  .catalog-header-tab__item-btn:hover {
     box-shadow: 0 0 20px rgba(var(--moderateviolet--rgb), 0.7);
     transition: 0.2s ease-in-out;
   }
@@ -304,51 +277,46 @@
   }
 }
 
-.catalog-header-tab__item:focus {
+.catalog-header-tab__item-btn:focus {
   margin-top: 0;
   width     : 46px;
   height    : 46px;
   outline   : none;
   transition: 0.2s ease-in-out;
-  border    : 2px solid var(--moderateviolet)
-}
-
-.accordion-tabs:focus {
-  outline: 1px solid var(--darkmoderateviolet)
-}
-
-.accordion-section:focus .accordion-section-item::before {
-  opacity: 1;
-}
-
-.accordion-section:focus .accordion-section__seven::before {
-  opacity: 1;
+  border    : 2px solid var(--moderateviolet);
+  transition: 0.2s ease-in-out;
 }
 
 .ui-state-focus .ui-icon,
 .ui-button:focus .ui-icon {
   background-image: url(../img/catalog/tick-close.png);
-  border          : 1px solid var(--darkmoderateviolet)
+  transition      : 0.2s ease-in-out;
 }
 
+.ui-accordion-header:focus {
+  border: 2px solid var(--darkmoderateviolet);
+}
 
 @media(max-width:1500px) {
 
   .accordion-tabs:active {
     text-decoration: underline;
     color          : var(--darkmoderateviolet);
-    font-weight    : 600
+    font-weight    : 600;
+    transition     : 0.5s ease-in-out;
   }
 
 
   .ui-accordion-header:active {
-    color: var(--moderateviolet)
+    color     : var(--moderateviolet);
+    transition: 0.5s ease-in-out;
   }
 
   .accordion-section:active .ui-icon {
     background-color: var(--darkmoderateviolet);
     background-image: url(../img/catalog/tick-open-active.png);
     border          : 2px solid var(--verysoftviolet);
+    transition      : 0.5s ease-in-out;
   }
 
   .ui-accordion .ui-accordion-content {
@@ -377,15 +345,7 @@
 }
 
 @media(max-width:1024px) {
-  .accordion-section-item::before {
-    top : 35px;
-    left: -1px;
-  }
 
-  .accordion-section__seven::before {
-    top : 35px;
-    left: -1px;
-  }
 
   .accordion-section__one {
     padding-top: 37px;
@@ -409,7 +369,7 @@
     margin-left: 42px;
   }
 
-  .catalog-header-tab__item::after {
+  .catalog-header-tab__item-btn::after {
     top: -12px
   }
 
@@ -553,20 +513,20 @@
     display: block
   }
 
-  .catalog-header-tab__item {
+  .catalog-header-tab__item-btn {
     width          : 34px;
     height         : 34px;
     background-size: contain
   }
 
-  .catalog-header-tab__item::after {
+  .catalog-header-tab__item-btn::after {
     width : 41px;
     height: 41px;
     top   : -7px;
     left  : -8px;
   }
 
-  .catalog-header-tab__item:focus {
+  .catalog-header-tab__item-btn:focus {
     width : 33px;
     height: 33px;
   }
@@ -577,20 +537,6 @@
     font-size  : 18px;
     line-height: 32px;
 
-  }
-
-  .accordion-section-item::before {
-    top   : 20px;
-    left  : -1px;
-    height: 26px;
-    width : 155px;
-  }
-
-  .accordion-section__seven::before {
-    top   : 17px;
-    left  : -1px;
-    height: 29px;
-    width : 77px;
   }
 
   .accordion-section__one {
